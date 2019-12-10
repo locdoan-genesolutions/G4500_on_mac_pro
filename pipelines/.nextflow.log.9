@@ -1,0 +1,155 @@
+Dec-08 18:59:16.840 [main] DEBUG nextflow.cli.Launcher - $> nextflow working.nf -c working.config -with-report report123.html --INDIR /Volumes/GSSD01/repo/testing_strelka/G4500_raw --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png
+Dec-08 18:59:17.092 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.10.0
+Dec-08 18:59:17.110 [main] INFO  nextflow.cli.CmdRun - Launching `working.nf` [hopeful_kalam] - revision: 7c69cebcde
+Dec-08 18:59:17.141 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/working.config
+Dec-08 18:59:17.141 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/working.config
+Dec-08 18:59:17.176 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Dec-08 18:59:17.921 [main] DEBUG nextflow.extension.OperatorEx - Dataflow extension methods: branch,buffer,chain,choice,collate,collect,collectFile,combine,concat,count,countBy,countFasta,countFastq,countLines,countText,cross,distinct,filter,first,flatMap,flatten,fork,groupBy,groupTuple,ifEmpty,into,join,last,map,max,mean,merge,min,mix,phase,print,println,randomSample,reduce,separate,set,splitCsv,splitFasta,splitFastq,splitText,spread,subscribe,sum,take,tap,toDouble,toFloat,toInteger,toList,toLong,toSortedList,transpose,unique,until,view
+Dec-08 18:59:17.927 [main] DEBUG nextflow.Session - Session uuid: 1cdda1db-e60d-492f-b34c-51baf3607f52
+Dec-08 18:59:17.927 [main] DEBUG nextflow.Session - Run name: hopeful_kalam
+Dec-08 18:59:17.928 [main] DEBUG nextflow.Session - Executor pool size: 12
+Dec-08 18:59:18.209 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 19.10.0 build 5170
+  Created: 21-10-2019 15:07 UTC (08:07 PDT)
+  System: Mac OS X 10.14.2
+  Runtime: Groovy 2.5.8 on OpenJDK 64-Bit Server VM 1.8.0_121-b15
+  Encoding: UTF-8 (UTF-8)
+  Process: 40751@Genes-Mac-Pro-03.local [192.168.0.189]
+  CPUs: 12 - Mem: 64 GB (15.1 GB) - Swap: 32 GB (1.1 GB)
+Dec-08 18:59:18.225 [main] DEBUG nextflow.Session - Work-dir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work [Mac OS X]
+Dec-08 18:59:18.226 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/bin
+Dec-08 18:59:18.246 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Dec-08 18:59:18.248 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-08 18:59:18.553 [main] DEBUG nextflow.Session - Session start invoked
+Dec-08 18:59:18.558 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/trace.txt
+Dec-08 18:59:18.883 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec-08 18:59:18.957 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /Volumes/GSSD01/repo/testing_strelka/G4500_raw/; pattern: *_R{1,2}_*.fastq.gz; options: [:]
+Dec-08 18:59:19.157 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:fastqc` matches process fastqc
+Dec-08 18:59:19.161 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 18:59:19.161 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 18:59:19.165 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Dec-08 18:59:19.172 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=12; memory=64 GB; capacity=12; pollInterval=100ms; dumpInterval=5m
+Dec-08 18:59:19.219 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > fastqc -- maxForks: 12
+Dec-08 18:59:19.246 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:trim` matches process trim
+Dec-08 18:59:19.247 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 18:59:19.247 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 18:59:19.248 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > trim -- maxForks: 12
+Dec-08 18:59:19.255 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:align_bwa` matches process align_bwa
+Dec-08 18:59:19.256 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 18:59:19.256 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 18:59:19.258 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > align_bwa -- maxForks: 12
+Dec-08 18:59:19.265 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:picard_SortSam` matches process picard_SortSam
+Dec-08 18:59:19.266 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 18:59:19.266 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 18:59:19.267 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > picard_SortSam -- maxForks: 12
+Dec-08 18:59:19.274 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:picard_MarkDuplicates` matches process picard_MarkDuplicates
+Dec-08 18:59:19.275 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 18:59:19.276 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 18:59:19.277 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > picard_MarkDuplicates -- maxForks: 12
+Dec-08 18:59:19.285 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:strelka` matches process strelka
+Dec-08 18:59:19.286 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 18:59:19.286 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 18:59:19.288 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > strelka -- maxForks: 12
+Dec-08 18:59:19.297 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:vep` matches process vep
+Dec-08 18:59:19.298 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 18:59:19.298 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 18:59:19.300 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > vep -- maxForks: 12
+Dec-08 18:59:19.307 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:vep_filter_using_R` matches process vep_filter_using_R
+Dec-08 18:59:19.307 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 18:59:19.307 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 18:59:19.309 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > vep_filter_using_R -- maxForks: 12
+Dec-08 18:59:19.314 [main] DEBUG nextflow.script.BaseScript - No entry workflow defined
+Dec-08 18:59:19.316 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Dec-08 18:59:19.316 [main] DEBUG nextflow.Session - Session await
+Dec-08 19:00:09.442 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 19:00:09.450 [Task submitter] INFO  nextflow.Session - [5a/9b86cb] Submitted process > trim (BBduk on 47-G1314_S47)
+Dec-08 19:00:09.476 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 19:00:09.477 [Task submitter] INFO  nextflow.Session - [50/5b6f3f] Submitted process > fastqc (FASTQC on 47-G1314_S47)
+Dec-08 19:00:11.530 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 19:00:11.530 [Task submitter] INFO  nextflow.Session - [c9/8aa47a] Submitted process > trim (BBduk on 45-G1308_S45)
+Dec-08 19:00:11.541 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 19:00:11.542 [Task submitter] INFO  nextflow.Session - [a0/6991e7] Submitted process > fastqc (FASTQC on 45-G1308_S45)
+Dec-08 19:00:11.923 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 19:00:11.923 [Task submitter] INFO  nextflow.Session - [ac/57dc88] Submitted process > fastqc (FASTQC on 48-G1315_S48)
+Dec-08 19:00:11.932 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 19:00:11.932 [Task submitter] INFO  nextflow.Session - [39/60edbd] Submitted process > trim (BBduk on 48-G1315_S48)
+Dec-08 19:00:12.209 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 19:00:12.209 [Task submitter] INFO  nextflow.Session - [74/e68ac5] Submitted process > trim (BBduk on 49-G1316_S49)
+Dec-08 19:00:12.220 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 19:00:12.220 [Task submitter] INFO  nextflow.Session - [7c/e12317] Submitted process > fastqc (FASTQC on 49-G1316_S49)
+Dec-08 19:04:19.303 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- pending tasks are shown below
+~> TaskHandler[id: 12; name: trim (BBduk on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/5a/9b86cb3209fde30b61dac7b2e5f746]
+~> TaskHandler[id: 5; name: fastqc (FASTQC on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/50/5b6f3fab0d63a0d436dbd1b582750a]
+~> TaskHandler[id: 10; name: trim (BBduk on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c9/8aa47a91c6d790be252104117db315]
+~> TaskHandler[id: 2; name: fastqc (FASTQC on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/a0/6991e75baf5d364107d842d83b032a]
+~> TaskHandler[id: 6; name: fastqc (FASTQC on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/ac/57dc882330a47408da98d64362a3d2]
+~> TaskHandler[id: 13; name: trim (BBduk on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/60edbd764854b90caabb2ea7cb1261]
+~> TaskHandler[id: 14; name: trim (BBduk on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/74/e68ac5c7b4c053b7ac44c43cb2701e]
+~> TaskHandler[id: 7; name: fastqc (FASTQC on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/7c/e12317ea6aa1e96942c516ec792af1]
+Dec-08 19:09:19.404 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- pending tasks are shown below
+~> TaskHandler[id: 12; name: trim (BBduk on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/5a/9b86cb3209fde30b61dac7b2e5f746]
+~> TaskHandler[id: 5; name: fastqc (FASTQC on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/50/5b6f3fab0d63a0d436dbd1b582750a]
+~> TaskHandler[id: 10; name: trim (BBduk on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c9/8aa47a91c6d790be252104117db315]
+~> TaskHandler[id: 2; name: fastqc (FASTQC on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/a0/6991e75baf5d364107d842d83b032a]
+~> TaskHandler[id: 6; name: fastqc (FASTQC on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/ac/57dc882330a47408da98d64362a3d2]
+~> TaskHandler[id: 13; name: trim (BBduk on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/60edbd764854b90caabb2ea7cb1261]
+~> TaskHandler[id: 14; name: trim (BBduk on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/74/e68ac5c7b4c053b7ac44c43cb2701e]
+~> TaskHandler[id: 7; name: fastqc (FASTQC on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/7c/e12317ea6aa1e96942c516ec792af1]
+Dec-08 19:14:19.490 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 8 -- pending tasks are shown below
+~> TaskHandler[id: 12; name: trim (BBduk on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/5a/9b86cb3209fde30b61dac7b2e5f746]
+~> TaskHandler[id: 5; name: fastqc (FASTQC on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/50/5b6f3fab0d63a0d436dbd1b582750a]
+~> TaskHandler[id: 10; name: trim (BBduk on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c9/8aa47a91c6d790be252104117db315]
+~> TaskHandler[id: 2; name: fastqc (FASTQC on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/a0/6991e75baf5d364107d842d83b032a]
+~> TaskHandler[id: 6; name: fastqc (FASTQC on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/ac/57dc882330a47408da98d64362a3d2]
+~> TaskHandler[id: 13; name: trim (BBduk on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/60edbd764854b90caabb2ea7cb1261]
+~> TaskHandler[id: 14; name: trim (BBduk on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/74/e68ac5c7b4c053b7ac44c43cb2701e]
+~> TaskHandler[id: 7; name: fastqc (FASTQC on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/7c/e12317ea6aa1e96942c516ec792af1]
+Dec-08 19:17:48.635 [SIGINT handler] DEBUG nextflow.Session - Session aborted -- Cause: SIGINT
+Dec-08 19:17:48.665 [SIGINT handler] DEBUG nextflow.Session - The following nodes are still active:
+[process] align_bwa
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: BWA_REPO_FOLDER
+  port 2: (cntrl) -     ; channel: $
+
+[process] picard_SortSam
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] picard_MarkDuplicates
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] strelka
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: BWA_REPO_FOLDER
+  port 2: (value) bound ; channel: TARGET_REPO_FOLDER
+  port 3: (cntrl) -     ; channel: $
+
+[process] vep
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: WORKING_FOLDER
+  port 2: (cntrl) -     ; channel: $
+
+[process] vep_filter_using_R
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: R_SCRIPT
+  port 2: (cntrl) -     ; channel: $
+
+Dec-08 19:17:48.668 [main] DEBUG nextflow.Session - Session await > all process finished
+Dec-08 19:17:48.668 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Dec-08 19:17:48.680 [main] WARN  n.processor.TaskPollingMonitor - Killing pending tasks (8)
+Dec-08 19:17:48.777 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=0; failedCount=8; ignoredCount=0; cachedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms]
+Dec-08 19:17:48.777 [main] DEBUG nextflow.trace.TraceFileObserver - Flow completing -- flushing trace file
+Dec-08 19:17:48.779 [main] DEBUG nextflow.trace.ReportObserver - Flow completing -- rendering html report
+Dec-08 19:17:48.817 [main] DEBUG nextflow.trace.ReportObserver - Execution report summary data:
+  [{"cpuUsage":null,"process":"trim","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":null,"writes":null},{"cpuUsage":null,"process":"fastqc","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":null,"writes":null}]
+Dec-08 19:17:49.795 [main] DEBUG nextflow.trace.TimelineObserver - Flow completing -- rendering html timeline
+Dec-08 19:17:49.829 [main] WARN  nextflow.dag.GraphvizRenderer - To render the execution DAG in the required format it is required to install Graphviz -- See http://www.graphviz.org for more info.
+Dec-08 19:17:49.909 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Dec-08 19:17:49.947 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

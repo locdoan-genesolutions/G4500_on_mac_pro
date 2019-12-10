@@ -1,0 +1,1 @@
+nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png 

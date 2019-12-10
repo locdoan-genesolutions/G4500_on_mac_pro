@@ -1,0 +1,456 @@
+Dec-08 21:00:27.524 [main] DEBUG nextflow.cli.Launcher - $> nextflow working.nf -c working.config -with-report report123.html --INDIR /Volumes/GSSD01/repo/testing_strelka/G4500_raw --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png -resume
+Dec-08 21:00:27.751 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.10.0
+Dec-08 21:00:27.770 [main] INFO  nextflow.cli.CmdRun - Launching `working.nf` [jolly_shaw] - revision: 7c69cebcde
+Dec-08 21:00:27.800 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/working.config
+Dec-08 21:00:27.801 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/working.config
+Dec-08 21:00:27.836 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Dec-08 21:00:28.574 [main] DEBUG nextflow.extension.OperatorEx - Dataflow extension methods: branch,buffer,chain,choice,collate,collect,collectFile,combine,concat,count,countBy,countFasta,countFastq,countLines,countText,cross,distinct,filter,first,flatMap,flatten,fork,groupBy,groupTuple,ifEmpty,into,join,last,map,max,mean,merge,min,mix,phase,print,println,randomSample,reduce,separate,set,splitCsv,splitFasta,splitFastq,splitText,spread,subscribe,sum,take,tap,toDouble,toFloat,toInteger,toList,toLong,toSortedList,transpose,unique,until,view
+Dec-08 21:00:28.578 [main] DEBUG nextflow.Session - Session uuid: 970e732c-b0d7-4971-a18b-17436df6bf74
+Dec-08 21:00:28.579 [main] DEBUG nextflow.Session - Run name: jolly_shaw
+Dec-08 21:00:28.579 [main] DEBUG nextflow.Session - Executor pool size: 12
+Dec-08 21:00:28.602 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 19.10.0 build 5170
+  Created: 21-10-2019 15:07 UTC (08:07 PDT)
+  System: Mac OS X 10.14.2
+  Runtime: Groovy 2.5.8 on OpenJDK 64-Bit Server VM 1.8.0_121-b15
+  Encoding: UTF-8 (UTF-8)
+  Process: 44783@Genes-Mac-Pro-03.local [192.168.0.189]
+  CPUs: 12 - Mem: 64 GB (347.2 MB) - Swap: 2 GB (348 MB)
+Dec-08 21:00:28.644 [main] DEBUG nextflow.Session - Work-dir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work [Mac OS X]
+Dec-08 21:00:28.644 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/bin
+Dec-08 21:00:28.660 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Dec-08 21:00:28.662 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-08 21:00:28.924 [main] DEBUG nextflow.Session - Session start invoked
+Dec-08 21:00:28.927 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/trace.txt
+Dec-08 21:00:29.232 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec-08 21:00:29.302 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /Volumes/GSSD01/repo/testing_strelka/G4500_raw/; pattern: *_R{1,2}_*.fastq.gz; options: [:]
+Dec-08 21:00:29.480 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:fastqc` matches process fastqc
+Dec-08 21:00:29.484 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 21:00:29.484 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 21:00:29.489 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Dec-08 21:00:29.495 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=12; memory=64 GB; capacity=12; pollInterval=100ms; dumpInterval=5m
+Dec-08 21:00:29.534 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > fastqc -- maxForks: 12
+Dec-08 21:00:29.555 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:trim` matches process trim
+Dec-08 21:00:29.556 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 21:00:29.556 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 21:00:29.557 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > trim -- maxForks: 12
+Dec-08 21:00:29.602 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:align_bwa` matches process align_bwa
+Dec-08 21:00:29.603 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 21:00:29.603 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 21:00:29.605 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > align_bwa -- maxForks: 12
+Dec-08 21:00:29.610 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:picard_SortSam` matches process picard_SortSam
+Dec-08 21:00:29.610 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 21:00:29.610 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 21:00:29.611 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > picard_SortSam -- maxForks: 12
+Dec-08 21:00:29.616 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:picard_MarkDuplicates` matches process picard_MarkDuplicates
+Dec-08 21:00:29.616 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 21:00:29.616 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 21:00:29.617 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > picard_MarkDuplicates -- maxForks: 12
+Dec-08 21:00:29.624 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:strelka` matches process strelka
+Dec-08 21:00:29.624 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 21:00:29.624 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 21:00:29.627 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > strelka -- maxForks: 12
+Dec-08 21:00:29.632 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:vep` matches process vep
+Dec-08 21:00:29.633 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 21:00:29.633 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 21:00:29.634 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > vep -- maxForks: 12
+Dec-08 21:00:29.639 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:vep_filter_using_R` matches process vep_filter_using_R
+Dec-08 21:00:29.639 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 21:00:29.639 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 21:00:29.640 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > vep_filter_using_R -- maxForks: 12
+Dec-08 21:00:29.643 [main] DEBUG nextflow.script.BaseScript - No entry workflow defined
+Dec-08 21:00:29.644 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Dec-08 21:00:29.644 [main] DEBUG nextflow.Session - Session await
+Dec-08 21:01:16.302 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [3b/01af9e] Cached process > fastqc (FASTQC on 47-G1314_S47)
+Dec-08 21:01:16.302 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [07/6bbc60] Cached process > trim (BBduk on 47-G1314_S47)
+Dec-08 21:01:16.350 [Actor Thread 15] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=36; maxQueueSize=108; keepAlive=1m
+Dec-08 21:01:18.129 [Actor Thread 13] INFO  nextflow.processor.TaskProcessor - [a4/69e887] Cached process > trim (BBduk on 45-G1308_S45)
+Dec-08 21:01:18.129 [Actor Thread 5] INFO  nextflow.processor.TaskProcessor - [c2/e43db6] Cached process > fastqc (FASTQC on 45-G1308_S45)
+Dec-08 21:01:18.535 [Actor Thread 16] INFO  nextflow.processor.TaskProcessor - [e6/1cd57d] Cached process > trim (BBduk on 48-G1315_S48)
+Dec-08 21:01:18.535 [Actor Thread 8] INFO  nextflow.processor.TaskProcessor - [5a/94fd27] Cached process > fastqc (FASTQC on 48-G1315_S48)
+Dec-08 21:01:18.797 [Actor Thread 17] INFO  nextflow.processor.TaskProcessor - [b3/5df787] Cached process > trim (BBduk on 49-G1316_S49)
+Dec-08 21:01:18.797 [Actor Thread 9] INFO  nextflow.processor.TaskProcessor - [f3/148d2d] Cached process > fastqc (FASTQC on 49-G1316_S49)
+Dec-08 21:01:19.454 [Actor Thread 6] INFO  nextflow.processor.TaskProcessor - [d0/197bb8] Cached process > fastqc (FASTQC on 46-G1309_S46)
+Dec-08 21:01:19.454 [Actor Thread 14] INFO  nextflow.processor.TaskProcessor - [b3/f9185f] Cached process > trim (BBduk on 46-G1309_S46)
+Dec-08 21:01:20.219 [Actor Thread 12] INFO  nextflow.processor.TaskProcessor - [6a/6485e3] Cached process > trim (BBduk on 44-G1307F_S44)
+Dec-08 21:01:20.219 [Actor Thread 4] INFO  nextflow.processor.TaskProcessor - [15/ab3c72] Cached process > fastqc (FASTQC on 44-G1307F_S44)
+Dec-08 21:01:20.836 [Actor Thread 3] INFO  nextflow.processor.TaskProcessor - [86/2002c2] Cached process > fastqc (FASTQC on 43-G1307M_S43)
+Dec-08 21:01:20.837 [Actor Thread 11] INFO  nextflow.processor.TaskProcessor - [88/378a2b] Cached process > trim (BBduk on 43-G1307M_S43)
+Dec-08 21:01:31.173 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 21:01:31.181 [Task submitter] INFO  nextflow.Session - [c2/50a003] Submitted process > align_bwa (bwa on 47-G1314_S47)
+Dec-08 21:01:33.978 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 21:01:33.979 [Task submitter] INFO  nextflow.Session - [f6/a98378] Submitted process > align_bwa (bwa on 45-G1308_S45)
+Dec-08 21:01:37.099 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 21:01:37.100 [Task submitter] INFO  nextflow.Session - [05/97a50e] Submitted process > align_bwa (bwa on 48-G1315_S48)
+Dec-08 21:05:29.651 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 15; name: align_bwa (bwa on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c2/50a003dce3887b6339d6bc0f8d7891]
+~> TaskHandler[id: 16; name: align_bwa (bwa on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f6/a983785bf0e42becb8e6a5a6bcb003]
+~> TaskHandler[id: 17; name: align_bwa (bwa on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/05/97a50e5c1bd229a2692ae0d0d1f7a1]
+Dec-08 21:10:29.687 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 15; name: align_bwa (bwa on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c2/50a003dce3887b6339d6bc0f8d7891]
+~> TaskHandler[id: 16; name: align_bwa (bwa on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f6/a983785bf0e42becb8e6a5a6bcb003]
+~> TaskHandler[id: 17; name: align_bwa (bwa on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/05/97a50e5c1bd229a2692ae0d0d1f7a1]
+Dec-08 21:15:29.720 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 15; name: align_bwa (bwa on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c2/50a003dce3887b6339d6bc0f8d7891]
+~> TaskHandler[id: 16; name: align_bwa (bwa on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f6/a983785bf0e42becb8e6a5a6bcb003]
+~> TaskHandler[id: 17; name: align_bwa (bwa on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/05/97a50e5c1bd229a2692ae0d0d1f7a1]
+Dec-08 21:20:29.769 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 15; name: align_bwa (bwa on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c2/50a003dce3887b6339d6bc0f8d7891]
+~> TaskHandler[id: 16; name: align_bwa (bwa on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f6/a983785bf0e42becb8e6a5a6bcb003]
+~> TaskHandler[id: 17; name: align_bwa (bwa on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/05/97a50e5c1bd229a2692ae0d0d1f7a1]
+Dec-08 21:25:29.843 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 15; name: align_bwa (bwa on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c2/50a003dce3887b6339d6bc0f8d7891]
+~> TaskHandler[id: 16; name: align_bwa (bwa on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f6/a983785bf0e42becb8e6a5a6bcb003]
+~> TaskHandler[id: 17; name: align_bwa (bwa on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/05/97a50e5c1bd229a2692ae0d0d1f7a1]
+Dec-08 21:30:30.188 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 15; name: align_bwa (bwa on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c2/50a003dce3887b6339d6bc0f8d7891]
+~> TaskHandler[id: 16; name: align_bwa (bwa on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f6/a983785bf0e42becb8e6a5a6bcb003]
+~> TaskHandler[id: 17; name: align_bwa (bwa on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/05/97a50e5c1bd229a2692ae0d0d1f7a1]
+Dec-08 21:35:29.996 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 15; name: align_bwa (bwa on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c2/50a003dce3887b6339d6bc0f8d7891]
+~> TaskHandler[id: 16; name: align_bwa (bwa on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f6/a983785bf0e42becb8e6a5a6bcb003]
+~> TaskHandler[id: 17; name: align_bwa (bwa on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/05/97a50e5c1bd229a2692ae0d0d1f7a1]
+Dec-08 21:40:29.936 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 15; name: align_bwa (bwa on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c2/50a003dce3887b6339d6bc0f8d7891]
+~> TaskHandler[id: 16; name: align_bwa (bwa on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f6/a983785bf0e42becb8e6a5a6bcb003]
+~> TaskHandler[id: 17; name: align_bwa (bwa on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/05/97a50e5c1bd229a2692ae0d0d1f7a1]
+Dec-08 21:45:29.989 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 15; name: align_bwa (bwa on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c2/50a003dce3887b6339d6bc0f8d7891]
+~> TaskHandler[id: 16; name: align_bwa (bwa on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f6/a983785bf0e42becb8e6a5a6bcb003]
+~> TaskHandler[id: 17; name: align_bwa (bwa on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/05/97a50e5c1bd229a2692ae0d0d1f7a1]
+Dec-08 21:50:30.073 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 15; name: align_bwa (bwa on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c2/50a003dce3887b6339d6bc0f8d7891]
+~> TaskHandler[id: 16; name: align_bwa (bwa on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f6/a983785bf0e42becb8e6a5a6bcb003]
+~> TaskHandler[id: 17; name: align_bwa (bwa on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/05/97a50e5c1bd229a2692ae0d0d1f7a1]
+Dec-08 21:51:54.898 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: align_bwa (bwa on 45-G1308_S45); status: COMPLETED; exit: 0; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f6/a983785bf0e42becb8e6a5a6bcb003]
+Dec-08 21:51:54.948 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 21:51:54.949 [Task submitter] INFO  nextflow.Session - [f0/195d1e] Submitted process > align_bwa (bwa on 49-G1316_S49)
+Dec-08 21:51:54.961 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 3 -- tasks to be submitted are shown below
+~> TaskHandler[id: 19; name: align_bwa (bwa on 46-G1309_S46); status: NEW; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/a3/da6294828a854cb2a8a478534892fc]
+~> TaskHandler[id: 20; name: align_bwa (bwa on 44-G1307F_S44); status: NEW; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/2e/e1e35479abc92a4aa9384e7f2f439b]
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: NEW; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+Dec-08 21:52:01.032 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: align_bwa (bwa on 47-G1314_S47); status: COMPLETED; exit: 0; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c2/50a003dce3887b6339d6bc0f8d7891]
+Dec-08 21:52:01.045 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 21:52:01.045 [Task submitter] INFO  nextflow.Session - [a3/da6294] Submitted process > align_bwa (bwa on 46-G1309_S46)
+Dec-08 21:53:06.393 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: align_bwa (bwa on 48-G1315_S48); status: COMPLETED; exit: 0; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/05/97a50e5c1bd229a2692ae0d0d1f7a1]
+Dec-08 21:53:07.040 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 21:53:07.042 [Task submitter] INFO  nextflow.Session - [2e/e1e354] Submitted process > align_bwa (bwa on 44-G1307F_S44)
+Dec-08 21:55:30.489 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 18; name: align_bwa (bwa on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f0/195d1e51684b91cce0a126dc5ff633]
+~> TaskHandler[id: 19; name: align_bwa (bwa on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/a3/da6294828a854cb2a8a478534892fc]
+~> TaskHandler[id: 20; name: align_bwa (bwa on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/2e/e1e35479abc92a4aa9384e7f2f439b]
+Dec-08 22:00:30.139 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 18; name: align_bwa (bwa on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f0/195d1e51684b91cce0a126dc5ff633]
+~> TaskHandler[id: 19; name: align_bwa (bwa on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/a3/da6294828a854cb2a8a478534892fc]
+~> TaskHandler[id: 20; name: align_bwa (bwa on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/2e/e1e35479abc92a4aa9384e7f2f439b]
+Dec-08 22:05:30.186 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 18; name: align_bwa (bwa on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f0/195d1e51684b91cce0a126dc5ff633]
+~> TaskHandler[id: 19; name: align_bwa (bwa on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/a3/da6294828a854cb2a8a478534892fc]
+~> TaskHandler[id: 20; name: align_bwa (bwa on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/2e/e1e35479abc92a4aa9384e7f2f439b]
+Dec-08 22:10:30.223 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 18; name: align_bwa (bwa on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f0/195d1e51684b91cce0a126dc5ff633]
+~> TaskHandler[id: 19; name: align_bwa (bwa on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/a3/da6294828a854cb2a8a478534892fc]
+~> TaskHandler[id: 20; name: align_bwa (bwa on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/2e/e1e35479abc92a4aa9384e7f2f439b]
+Dec-08 22:15:30.255 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 18; name: align_bwa (bwa on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f0/195d1e51684b91cce0a126dc5ff633]
+~> TaskHandler[id: 19; name: align_bwa (bwa on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/a3/da6294828a854cb2a8a478534892fc]
+~> TaskHandler[id: 20; name: align_bwa (bwa on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/2e/e1e35479abc92a4aa9384e7f2f439b]
+Dec-08 22:20:30.380 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 18; name: align_bwa (bwa on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f0/195d1e51684b91cce0a126dc5ff633]
+~> TaskHandler[id: 19; name: align_bwa (bwa on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/a3/da6294828a854cb2a8a478534892fc]
+~> TaskHandler[id: 20; name: align_bwa (bwa on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/2e/e1e35479abc92a4aa9384e7f2f439b]
+Dec-08 22:25:30.451 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 18; name: align_bwa (bwa on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f0/195d1e51684b91cce0a126dc5ff633]
+~> TaskHandler[id: 19; name: align_bwa (bwa on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/a3/da6294828a854cb2a8a478534892fc]
+~> TaskHandler[id: 20; name: align_bwa (bwa on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/2e/e1e35479abc92a4aa9384e7f2f439b]
+Dec-08 22:30:30.465 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 18; name: align_bwa (bwa on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f0/195d1e51684b91cce0a126dc5ff633]
+~> TaskHandler[id: 19; name: align_bwa (bwa on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/a3/da6294828a854cb2a8a478534892fc]
+~> TaskHandler[id: 20; name: align_bwa (bwa on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/2e/e1e35479abc92a4aa9384e7f2f439b]
+Dec-08 22:35:30.532 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 18; name: align_bwa (bwa on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f0/195d1e51684b91cce0a126dc5ff633]
+~> TaskHandler[id: 19; name: align_bwa (bwa on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/a3/da6294828a854cb2a8a478534892fc]
+~> TaskHandler[id: 20; name: align_bwa (bwa on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/2e/e1e35479abc92a4aa9384e7f2f439b]
+Dec-08 22:40:30.560 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 18; name: align_bwa (bwa on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f0/195d1e51684b91cce0a126dc5ff633]
+~> TaskHandler[id: 19; name: align_bwa (bwa on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/a3/da6294828a854cb2a8a478534892fc]
+~> TaskHandler[id: 20; name: align_bwa (bwa on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/2e/e1e35479abc92a4aa9384e7f2f439b]
+Dec-08 22:45:30.611 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 18; name: align_bwa (bwa on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f0/195d1e51684b91cce0a126dc5ff633]
+~> TaskHandler[id: 19; name: align_bwa (bwa on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/a3/da6294828a854cb2a8a478534892fc]
+~> TaskHandler[id: 20; name: align_bwa (bwa on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/2e/e1e35479abc92a4aa9384e7f2f439b]
+Dec-08 22:50:30.652 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 18; name: align_bwa (bwa on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f0/195d1e51684b91cce0a126dc5ff633]
+~> TaskHandler[id: 19; name: align_bwa (bwa on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/a3/da6294828a854cb2a8a478534892fc]
+~> TaskHandler[id: 20; name: align_bwa (bwa on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/2e/e1e35479abc92a4aa9384e7f2f439b]
+Dec-08 22:55:30.767 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 18; name: align_bwa (bwa on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f0/195d1e51684b91cce0a126dc5ff633]
+~> TaskHandler[id: 19; name: align_bwa (bwa on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/a3/da6294828a854cb2a8a478534892fc]
+~> TaskHandler[id: 20; name: align_bwa (bwa on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/2e/e1e35479abc92a4aa9384e7f2f439b]
+Dec-08 23:00:30.734 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- pending tasks are shown below
+~> TaskHandler[id: 18; name: align_bwa (bwa on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f0/195d1e51684b91cce0a126dc5ff633]
+~> TaskHandler[id: 19; name: align_bwa (bwa on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/a3/da6294828a854cb2a8a478534892fc]
+~> TaskHandler[id: 20; name: align_bwa (bwa on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/2e/e1e35479abc92a4aa9384e7f2f439b]
+Dec-08 23:04:57.966 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: align_bwa (bwa on 49-G1316_S49); status: COMPLETED; exit: 0; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f0/195d1e51684b91cce0a126dc5ff633]
+Dec-08 23:04:58.034 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 23:04:58.035 [Task submitter] INFO  nextflow.Session - [bf/05044d] Submitted process > align_bwa (bwa on 43-G1307M_S43)
+Dec-08 23:04:58.043 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 3 -- tasks to be submitted are shown below
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: NEW; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: NEW; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: NEW; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+Dec-08 23:04:59.023 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: align_bwa (bwa on 46-G1309_S46); status: COMPLETED; exit: 0; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/a3/da6294828a854cb2a8a478534892fc]
+Dec-08 23:04:59.038 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 23:04:59.045 [Task submitter] INFO  nextflow.Session - [53/3b90a9] Submitted process > picard_SortSam (picard SortSam on 47-G1314_S47)
+Dec-08 23:04:59.075 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 23:04:59.076 [Task submitter] INFO  nextflow.Session - [8f/77eef2] Submitted process > picard_SortSam (picard SortSam on 45-G1308_S45)
+Dec-08 23:04:59.100 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 23:04:59.100 [Task submitter] INFO  nextflow.Session - [f8/c19260] Submitted process > picard_SortSam (picard SortSam on 48-G1315_S48)
+Dec-08 23:05:22.532 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: align_bwa (bwa on 44-G1307F_S44); status: COMPLETED; exit: 0; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/2e/e1e35479abc92a4aa9384e7f2f439b]
+Dec-08 23:05:30.744 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+Dec-08 23:10:30.770 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+Dec-08 23:12:30.240 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 23:12:30.241 [Task submitter] INFO  nextflow.Session - [54/3cf2f1] Submitted process > picard_SortSam (picard SortSam on 49-G1316_S49)
+Dec-08 23:12:39.928 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 23:12:39.929 [Task submitter] INFO  nextflow.Session - [39/7d883c] Submitted process > picard_SortSam (picard SortSam on 46-G1309_S46)
+Dec-08 23:12:50.711 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 23:12:50.711 [Task submitter] INFO  nextflow.Session - [92/1967cb] Submitted process > picard_SortSam (picard SortSam on 44-G1307F_S44)
+Dec-08 23:15:30.812 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-08 23:20:30.925 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-08 23:25:30.968 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-08 23:30:31.252 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-08 23:35:31.206 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-08 23:40:31.138 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-08 23:45:31.107 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-08 23:50:31.328 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-08 23:55:31.492 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-09 00:00:31.274 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-09 00:05:31.464 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-09 00:10:31.355 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-09 00:15:31.381 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-09 00:20:31.420 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-09 00:25:31.504 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-09 00:30:33.208 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-09 00:35:31.964 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-09 00:40:32.130 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-09 00:45:32.706 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-09 00:50:34.090 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-09 00:55:32.577 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-09 01:00:34.017 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-09 01:05:34.532 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-09 01:10:32.889 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-09 01:15:36.031 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-09 01:20:34.639 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-09 01:25:33.795 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-09 01:30:33.020 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]
+Dec-09 01:35:34.982 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 7 -- pending tasks are shown below
+~> TaskHandler[id: 21; name: align_bwa (bwa on 43-G1307M_S43); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/bf/05044d36bab008b9dc9163fd8919d2]
+~> TaskHandler[id: 23; name: picard_SortSam (picard SortSam on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/53/3b90a97958b19ada3ab4294f864b00]
+~> TaskHandler[id: 22; name: picard_SortSam (picard SortSam on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/8f/77eef2d9d4c19be312d339e29c4deb]
+~> TaskHandler[id: 24; name: picard_SortSam (picard SortSam on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/f8/c1926066fc8d22ff25d4447adbfafe]
+~> TaskHandler[id: 25; name: picard_SortSam (picard SortSam on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/54/3cf2f15608e87307b3354623c1fcd7]
+~> TaskHandler[id: 26; name: picard_SortSam (picard SortSam on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/39/7d883ce31c5ff83eb532fe11aa5703]
+~> TaskHandler[id: 27; name: picard_SortSam (picard SortSam on 44-G1307F_S44); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/92/1967cb8ec02fc7598db16be5b2edde]

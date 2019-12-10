@@ -1,0 +1,251 @@
+Dec-08 19:21:12.075 [main] DEBUG nextflow.cli.Launcher - $> nextflow working.nf -c working.config -with-report report123.html --INDIR /Volumes/GSSD01/repo/testing_strelka/G4500_raw --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png
+Dec-08 19:21:12.329 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.10.0
+Dec-08 19:21:12.350 [main] INFO  nextflow.cli.CmdRun - Launching `working.nf` [hopeful_volta] - revision: 7c69cebcde
+Dec-08 19:21:12.388 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/working.config
+Dec-08 19:21:12.389 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/working.config
+Dec-08 19:21:12.426 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Dec-08 19:21:13.227 [main] DEBUG nextflow.extension.OperatorEx - Dataflow extension methods: branch,buffer,chain,choice,collate,collect,collectFile,combine,concat,count,countBy,countFasta,countFastq,countLines,countText,cross,distinct,filter,first,flatMap,flatten,fork,groupBy,groupTuple,ifEmpty,into,join,last,map,max,mean,merge,min,mix,phase,print,println,randomSample,reduce,separate,set,splitCsv,splitFasta,splitFastq,splitText,spread,subscribe,sum,take,tap,toDouble,toFloat,toInteger,toList,toLong,toSortedList,transpose,unique,until,view
+Dec-08 19:21:13.233 [main] DEBUG nextflow.Session - Session uuid: dad41195-824e-4fca-a7b5-e26b5feba333
+Dec-08 19:21:13.234 [main] DEBUG nextflow.Session - Run name: hopeful_volta
+Dec-08 19:21:13.234 [main] DEBUG nextflow.Session - Executor pool size: 12
+Dec-08 19:21:13.499 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 19.10.0 build 5170
+  Created: 21-10-2019 15:07 UTC (08:07 PDT)
+  System: Mac OS X 10.14.2
+  Runtime: Groovy 2.5.8 on OpenJDK 64-Bit Server VM 1.8.0_121-b15
+  Encoding: UTF-8 (UTF-8)
+  Process: 41764@Genes-Mac-Pro-03.local [192.168.0.189]
+  CPUs: 12 - Mem: 64 GB (4.3 GB) - Swap: 32 GB (1.2 GB)
+Dec-08 19:21:13.516 [main] DEBUG nextflow.Session - Work-dir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work [Mac OS X]
+Dec-08 19:21:13.516 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/bin
+Dec-08 19:21:13.531 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Dec-08 19:21:13.533 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-08 19:21:13.784 [main] DEBUG nextflow.Session - Session start invoked
+Dec-08 19:21:13.788 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/trace.txt
+Dec-08 19:21:14.101 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec-08 19:21:14.164 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /Volumes/GSSD01/repo/testing_strelka/G4500_raw/; pattern: *_R{1,2}_*.fastq.gz; options: [:]
+Dec-08 19:21:14.335 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:fastqc` matches process fastqc
+Dec-08 19:21:14.338 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 19:21:14.338 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 19:21:14.342 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Dec-08 19:21:14.348 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=12; memory=64 GB; capacity=12; pollInterval=100ms; dumpInterval=5m
+Dec-08 19:21:14.386 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > fastqc -- maxForks: 12
+Dec-08 19:21:14.408 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:trim` matches process trim
+Dec-08 19:21:14.408 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 19:21:14.408 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 19:21:14.409 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > trim -- maxForks: 12
+Dec-08 19:21:14.414 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:align_bwa` matches process align_bwa
+Dec-08 19:21:14.415 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 19:21:14.415 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 19:21:14.417 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > align_bwa -- maxForks: 12
+Dec-08 19:21:14.465 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:picard_SortSam` matches process picard_SortSam
+Dec-08 19:21:14.465 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 19:21:14.465 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 19:21:14.466 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > picard_SortSam -- maxForks: 12
+Dec-08 19:21:14.471 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:picard_MarkDuplicates` matches process picard_MarkDuplicates
+Dec-08 19:21:14.472 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 19:21:14.472 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 19:21:14.473 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > picard_MarkDuplicates -- maxForks: 12
+Dec-08 19:21:14.481 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:strelka` matches process strelka
+Dec-08 19:21:14.481 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 19:21:14.481 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 19:21:14.485 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > strelka -- maxForks: 12
+Dec-08 19:21:14.492 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:vep` matches process vep
+Dec-08 19:21:14.492 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 19:21:14.492 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 19:21:14.494 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > vep -- maxForks: 12
+Dec-08 19:21:14.500 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:vep_filter_using_R` matches process vep_filter_using_R
+Dec-08 19:21:14.500 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 19:21:14.500 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 19:21:14.501 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > vep_filter_using_R -- maxForks: 12
+Dec-08 19:21:14.506 [main] DEBUG nextflow.script.BaseScript - No entry workflow defined
+Dec-08 19:21:14.508 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Dec-08 19:21:14.508 [main] DEBUG nextflow.Session - Session await
+Dec-08 19:21:37.821 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 19:21:37.827 [Task submitter] INFO  nextflow.Session - [fb/6b129d] Submitted process > trim (BBduk on 47-G1314_S47)
+Dec-08 19:21:37.844 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 19:21:37.844 [Task submitter] INFO  nextflow.Session - [c7/ec7f69] Submitted process > fastqc (FASTQC on 47-G1314_S47)
+Dec-08 19:21:38.818 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 19:21:38.819 [Task submitter] INFO  nextflow.Session - [26/ce0d1e] Submitted process > trim (BBduk on 45-G1308_S45)
+Dec-08 19:21:38.827 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 19:21:38.827 [Task submitter] INFO  nextflow.Session - [48/52eade] Submitted process > fastqc (FASTQC on 45-G1308_S45)
+Dec-08 19:21:38.936 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 19:21:38.936 [Task submitter] INFO  nextflow.Session - [eb/5d8953] Submitted process > fastqc (FASTQC on 48-G1315_S48)
+Dec-08 19:21:38.944 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 19:21:38.944 [Task submitter] INFO  nextflow.Session - [12/237ef8] Submitted process > trim (BBduk on 48-G1315_S48)
+Dec-08 19:21:39.116 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 19:21:39.116 [Task submitter] INFO  nextflow.Session - [33/fb6f26] Submitted process > fastqc (FASTQC on 49-G1316_S49)
+Dec-08 19:21:39.125 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 19:21:39.126 [Task submitter] INFO  nextflow.Session - [dd/a3002d] Submitted process > trim (BBduk on 49-G1316_S49)
+Dec-08 19:21:39.482 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 19:21:39.482 [Task submitter] INFO  nextflow.Session - [68/638281] Submitted process > fastqc (FASTQC on 46-G1309_S46)
+Dec-08 19:21:39.500 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 19:21:39.501 [Task submitter] INFO  nextflow.Session - [32/c38a2f] Submitted process > trim (BBduk on 46-G1309_S46)
+Dec-08 19:21:39.990 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 19:21:39.990 [Task submitter] INFO  nextflow.Session - [7a/43f0b9] Submitted process > fastqc (FASTQC on 44-G1307F_S44)
+Dec-08 19:21:40.035 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 19:21:40.035 [Task submitter] INFO  nextflow.Session - [1e/4ab037] Submitted process > trim (BBduk on 44-G1307F_S44)
+Dec-08 19:26:14.502 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 12 -- pending tasks are shown below
+~> TaskHandler[id: 12; name: trim (BBduk on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/fb/6b129d332fd3b77134077b419e6bb2]
+~> TaskHandler[id: 6; name: fastqc (FASTQC on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c7/ec7f69c186b34bccc671d84b399bad]
+~> TaskHandler[id: 10; name: trim (BBduk on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/26/ce0d1efe86eb4b8047419a4da00270]
+~> TaskHandler[id: 1; name: fastqc (FASTQC on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/48/52eade19d2225880937d5400d6bbc6]
+~> TaskHandler[id: 5; name: fastqc (FASTQC on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/eb/5d89530d46f19140b1662a3a9a0334]
+~> TaskHandler[id: 13; name: trim (BBduk on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/12/237ef863e5f318d24f047347c90bb3]
+~> TaskHandler[id: 7; name: fastqc (FASTQC on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/33/fb6f266a2ab25b72147290e965a1bd]
+~> TaskHandler[id: 14; name: trim (BBduk on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/dd/a3002d8485dc428f1234210cd704ac]
+~> TaskHandler[id: 4; name: fastqc (FASTQC on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/68/6382810a35874b1592953da2548776]
+~> TaskHandler[id: 11; name: trim (BBduk on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/32/c38a2f7002061edb09f3b67a6651c6]
+.. remaining tasks omitted.
+Dec-08 19:31:14.571 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 12 -- pending tasks are shown below
+~> TaskHandler[id: 12; name: trim (BBduk on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/fb/6b129d332fd3b77134077b419e6bb2]
+~> TaskHandler[id: 6; name: fastqc (FASTQC on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c7/ec7f69c186b34bccc671d84b399bad]
+~> TaskHandler[id: 10; name: trim (BBduk on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/26/ce0d1efe86eb4b8047419a4da00270]
+~> TaskHandler[id: 1; name: fastqc (FASTQC on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/48/52eade19d2225880937d5400d6bbc6]
+~> TaskHandler[id: 5; name: fastqc (FASTQC on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/eb/5d89530d46f19140b1662a3a9a0334]
+~> TaskHandler[id: 13; name: trim (BBduk on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/12/237ef863e5f318d24f047347c90bb3]
+~> TaskHandler[id: 7; name: fastqc (FASTQC on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/33/fb6f266a2ab25b72147290e965a1bd]
+~> TaskHandler[id: 14; name: trim (BBduk on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/dd/a3002d8485dc428f1234210cd704ac]
+~> TaskHandler[id: 4; name: fastqc (FASTQC on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/68/6382810a35874b1592953da2548776]
+~> TaskHandler[id: 11; name: trim (BBduk on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/32/c38a2f7002061edb09f3b67a6651c6]
+.. remaining tasks omitted.
+Dec-08 19:36:14.663 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 12 -- pending tasks are shown below
+~> TaskHandler[id: 12; name: trim (BBduk on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/fb/6b129d332fd3b77134077b419e6bb2]
+~> TaskHandler[id: 6; name: fastqc (FASTQC on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c7/ec7f69c186b34bccc671d84b399bad]
+~> TaskHandler[id: 10; name: trim (BBduk on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/26/ce0d1efe86eb4b8047419a4da00270]
+~> TaskHandler[id: 1; name: fastqc (FASTQC on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/48/52eade19d2225880937d5400d6bbc6]
+~> TaskHandler[id: 5; name: fastqc (FASTQC on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/eb/5d89530d46f19140b1662a3a9a0334]
+~> TaskHandler[id: 13; name: trim (BBduk on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/12/237ef863e5f318d24f047347c90bb3]
+~> TaskHandler[id: 7; name: fastqc (FASTQC on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/33/fb6f266a2ab25b72147290e965a1bd]
+~> TaskHandler[id: 14; name: trim (BBduk on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/dd/a3002d8485dc428f1234210cd704ac]
+~> TaskHandler[id: 4; name: fastqc (FASTQC on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/68/6382810a35874b1592953da2548776]
+~> TaskHandler[id: 11; name: trim (BBduk on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/32/c38a2f7002061edb09f3b67a6651c6]
+.. remaining tasks omitted.
+Dec-08 19:41:14.690 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 12 -- pending tasks are shown below
+~> TaskHandler[id: 12; name: trim (BBduk on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/fb/6b129d332fd3b77134077b419e6bb2]
+~> TaskHandler[id: 6; name: fastqc (FASTQC on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c7/ec7f69c186b34bccc671d84b399bad]
+~> TaskHandler[id: 10; name: trim (BBduk on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/26/ce0d1efe86eb4b8047419a4da00270]
+~> TaskHandler[id: 1; name: fastqc (FASTQC on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/48/52eade19d2225880937d5400d6bbc6]
+~> TaskHandler[id: 5; name: fastqc (FASTQC on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/eb/5d89530d46f19140b1662a3a9a0334]
+~> TaskHandler[id: 13; name: trim (BBduk on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/12/237ef863e5f318d24f047347c90bb3]
+~> TaskHandler[id: 7; name: fastqc (FASTQC on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/33/fb6f266a2ab25b72147290e965a1bd]
+~> TaskHandler[id: 14; name: trim (BBduk on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/dd/a3002d8485dc428f1234210cd704ac]
+~> TaskHandler[id: 4; name: fastqc (FASTQC on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/68/6382810a35874b1592953da2548776]
+~> TaskHandler[id: 11; name: trim (BBduk on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/32/c38a2f7002061edb09f3b67a6651c6]
+.. remaining tasks omitted.
+Dec-08 19:46:14.702 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 12 -- pending tasks are shown below
+~> TaskHandler[id: 12; name: trim (BBduk on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/fb/6b129d332fd3b77134077b419e6bb2]
+~> TaskHandler[id: 6; name: fastqc (FASTQC on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c7/ec7f69c186b34bccc671d84b399bad]
+~> TaskHandler[id: 10; name: trim (BBduk on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/26/ce0d1efe86eb4b8047419a4da00270]
+~> TaskHandler[id: 1; name: fastqc (FASTQC on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/48/52eade19d2225880937d5400d6bbc6]
+~> TaskHandler[id: 5; name: fastqc (FASTQC on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/eb/5d89530d46f19140b1662a3a9a0334]
+~> TaskHandler[id: 13; name: trim (BBduk on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/12/237ef863e5f318d24f047347c90bb3]
+~> TaskHandler[id: 7; name: fastqc (FASTQC on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/33/fb6f266a2ab25b72147290e965a1bd]
+~> TaskHandler[id: 14; name: trim (BBduk on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/dd/a3002d8485dc428f1234210cd704ac]
+~> TaskHandler[id: 4; name: fastqc (FASTQC on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/68/6382810a35874b1592953da2548776]
+~> TaskHandler[id: 11; name: trim (BBduk on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/32/c38a2f7002061edb09f3b67a6651c6]
+.. remaining tasks omitted.
+Dec-08 19:51:14.732 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 12 -- pending tasks are shown below
+~> TaskHandler[id: 12; name: trim (BBduk on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/fb/6b129d332fd3b77134077b419e6bb2]
+~> TaskHandler[id: 6; name: fastqc (FASTQC on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c7/ec7f69c186b34bccc671d84b399bad]
+~> TaskHandler[id: 10; name: trim (BBduk on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/26/ce0d1efe86eb4b8047419a4da00270]
+~> TaskHandler[id: 1; name: fastqc (FASTQC on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/48/52eade19d2225880937d5400d6bbc6]
+~> TaskHandler[id: 5; name: fastqc (FASTQC on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/eb/5d89530d46f19140b1662a3a9a0334]
+~> TaskHandler[id: 13; name: trim (BBduk on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/12/237ef863e5f318d24f047347c90bb3]
+~> TaskHandler[id: 7; name: fastqc (FASTQC on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/33/fb6f266a2ab25b72147290e965a1bd]
+~> TaskHandler[id: 14; name: trim (BBduk on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/dd/a3002d8485dc428f1234210cd704ac]
+~> TaskHandler[id: 4; name: fastqc (FASTQC on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/68/6382810a35874b1592953da2548776]
+~> TaskHandler[id: 11; name: trim (BBduk on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/32/c38a2f7002061edb09f3b67a6651c6]
+.. remaining tasks omitted.
+Dec-08 19:56:14.748 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 12 -- pending tasks are shown below
+~> TaskHandler[id: 12; name: trim (BBduk on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/fb/6b129d332fd3b77134077b419e6bb2]
+~> TaskHandler[id: 6; name: fastqc (FASTQC on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c7/ec7f69c186b34bccc671d84b399bad]
+~> TaskHandler[id: 10; name: trim (BBduk on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/26/ce0d1efe86eb4b8047419a4da00270]
+~> TaskHandler[id: 1; name: fastqc (FASTQC on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/48/52eade19d2225880937d5400d6bbc6]
+~> TaskHandler[id: 5; name: fastqc (FASTQC on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/eb/5d89530d46f19140b1662a3a9a0334]
+~> TaskHandler[id: 13; name: trim (BBduk on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/12/237ef863e5f318d24f047347c90bb3]
+~> TaskHandler[id: 7; name: fastqc (FASTQC on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/33/fb6f266a2ab25b72147290e965a1bd]
+~> TaskHandler[id: 14; name: trim (BBduk on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/dd/a3002d8485dc428f1234210cd704ac]
+~> TaskHandler[id: 4; name: fastqc (FASTQC on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/68/6382810a35874b1592953da2548776]
+~> TaskHandler[id: 11; name: trim (BBduk on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/32/c38a2f7002061edb09f3b67a6651c6]
+.. remaining tasks omitted.
+Dec-08 20:01:14.782 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 12 -- pending tasks are shown below
+~> TaskHandler[id: 12; name: trim (BBduk on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/fb/6b129d332fd3b77134077b419e6bb2]
+~> TaskHandler[id: 6; name: fastqc (FASTQC on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c7/ec7f69c186b34bccc671d84b399bad]
+~> TaskHandler[id: 10; name: trim (BBduk on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/26/ce0d1efe86eb4b8047419a4da00270]
+~> TaskHandler[id: 1; name: fastqc (FASTQC on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/48/52eade19d2225880937d5400d6bbc6]
+~> TaskHandler[id: 5; name: fastqc (FASTQC on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/eb/5d89530d46f19140b1662a3a9a0334]
+~> TaskHandler[id: 13; name: trim (BBduk on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/12/237ef863e5f318d24f047347c90bb3]
+~> TaskHandler[id: 7; name: fastqc (FASTQC on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/33/fb6f266a2ab25b72147290e965a1bd]
+~> TaskHandler[id: 14; name: trim (BBduk on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/dd/a3002d8485dc428f1234210cd704ac]
+~> TaskHandler[id: 4; name: fastqc (FASTQC on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/68/6382810a35874b1592953da2548776]
+~> TaskHandler[id: 11; name: trim (BBduk on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/32/c38a2f7002061edb09f3b67a6651c6]
+.. remaining tasks omitted.
+Dec-08 20:06:14.812 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 12 -- pending tasks are shown below
+~> TaskHandler[id: 12; name: trim (BBduk on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/fb/6b129d332fd3b77134077b419e6bb2]
+~> TaskHandler[id: 6; name: fastqc (FASTQC on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c7/ec7f69c186b34bccc671d84b399bad]
+~> TaskHandler[id: 10; name: trim (BBduk on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/26/ce0d1efe86eb4b8047419a4da00270]
+~> TaskHandler[id: 1; name: fastqc (FASTQC on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/48/52eade19d2225880937d5400d6bbc6]
+~> TaskHandler[id: 5; name: fastqc (FASTQC on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/eb/5d89530d46f19140b1662a3a9a0334]
+~> TaskHandler[id: 13; name: trim (BBduk on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/12/237ef863e5f318d24f047347c90bb3]
+~> TaskHandler[id: 7; name: fastqc (FASTQC on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/33/fb6f266a2ab25b72147290e965a1bd]
+~> TaskHandler[id: 14; name: trim (BBduk on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/dd/a3002d8485dc428f1234210cd704ac]
+~> TaskHandler[id: 4; name: fastqc (FASTQC on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/68/6382810a35874b1592953da2548776]
+~> TaskHandler[id: 11; name: trim (BBduk on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/32/c38a2f7002061edb09f3b67a6651c6]
+.. remaining tasks omitted.
+Dec-08 20:11:14.835 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 12 -- pending tasks are shown below
+~> TaskHandler[id: 12; name: trim (BBduk on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/fb/6b129d332fd3b77134077b419e6bb2]
+~> TaskHandler[id: 6; name: fastqc (FASTQC on 47-G1314_S47); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/c7/ec7f69c186b34bccc671d84b399bad]
+~> TaskHandler[id: 10; name: trim (BBduk on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/26/ce0d1efe86eb4b8047419a4da00270]
+~> TaskHandler[id: 1; name: fastqc (FASTQC on 45-G1308_S45); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/48/52eade19d2225880937d5400d6bbc6]
+~> TaskHandler[id: 5; name: fastqc (FASTQC on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/eb/5d89530d46f19140b1662a3a9a0334]
+~> TaskHandler[id: 13; name: trim (BBduk on 48-G1315_S48); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/12/237ef863e5f318d24f047347c90bb3]
+~> TaskHandler[id: 7; name: fastqc (FASTQC on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/33/fb6f266a2ab25b72147290e965a1bd]
+~> TaskHandler[id: 14; name: trim (BBduk on 49-G1316_S49); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/dd/a3002d8485dc428f1234210cd704ac]
+~> TaskHandler[id: 4; name: fastqc (FASTQC on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/68/6382810a35874b1592953da2548776]
+~> TaskHandler[id: 11; name: trim (BBduk on 46-G1309_S46); status: RUNNING; exit: -; error: -; workDir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work/32/c38a2f7002061edb09f3b67a6651c6]
+.. remaining tasks omitted.
+Dec-08 20:15:55.625 [SIGINT handler] DEBUG nextflow.Session - Session aborted -- Cause: SIGINT
+Dec-08 20:15:55.655 [SIGINT handler] DEBUG nextflow.Session - The following nodes are still active:
+[process] align_bwa
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: BWA_REPO_FOLDER
+  port 2: (cntrl) -     ; channel: $
+
+[process] picard_SortSam
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] picard_MarkDuplicates
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] strelka
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: BWA_REPO_FOLDER
+  port 2: (value) bound ; channel: TARGET_REPO_FOLDER
+  port 3: (cntrl) -     ; channel: $
+
+[process] vep
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: WORKING_FOLDER
+  port 2: (cntrl) -     ; channel: $
+
+[process] vep_filter_using_R
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: R_SCRIPT
+  port 2: (cntrl) -     ; channel: $
+
+Dec-08 20:15:55.660 [main] DEBUG nextflow.Session - Session await > all process finished
+Dec-08 20:15:55.660 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Dec-08 20:15:55.672 [main] WARN  n.processor.TaskPollingMonitor - Killing pending tasks (12)
+Dec-08 20:15:55.811 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=0; failedCount=12; ignoredCount=0; cachedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms]
+Dec-08 20:15:55.812 [main] DEBUG nextflow.trace.TraceFileObserver - Flow completing -- flushing trace file
+Dec-08 20:15:55.813 [main] DEBUG nextflow.trace.ReportObserver - Flow completing -- rendering html report
+Dec-08 20:19:41.254 [SIGINT handler] INFO  nextflow.Session - Adieu

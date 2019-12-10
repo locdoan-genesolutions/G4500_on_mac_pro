@@ -1,0 +1,225 @@
+<!doctype html>
+<!--
+  ~ Copyright 2013-2019, Centre for Genomic Regulation (CRG)
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<script type="text/javascript">
+var prot = (("https:" == document.location.protocol) ? "https://" : "http://");
+document.write(unescape("%3Cscript src='" + prot + "code.jquery.com/jquery-latest.min.js' type='text/javascript' %3E%3C/script%3E"));
+document.write(unescape("%3Cscript src='" + prot + "d3js.org/d3.v3.min.js' charset='utf-8' type='text/javascript' %3E%3C/script%3E"));
+document.write(unescape("%3Cscript src='" + prot + "cdn.rawgit.com/nextflow-io/d3-timeline/82622c4cc35bac7283b3a317826b0709ac1ae476/src/d3-timeline.js' type='text/javascript' %3E%3C/script%3E"));
+</script>
+<style type="text/css">
+* {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.axis path,
+.axis line {
+fill: none;
+  stroke: black;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font-size: 10px;
+}
+
+div#timeline g text {
+  font-size: 13px;
+}
+
+text.timeline-label {
+  font-size: 13px;
+}
+
+#timeline2 .axis {
+  transform: translate(0px,30px);
+  -ms-transform: translate(0px,30px); /* IE 9 */
+  -webkit-transform: translate(0px,30px); /* Safari and Chrome */
+  -o-transform: translate(0px,30px); /* Opera */
+  -moz-transform: translate(0px,30px); /* Firefox */
+}
+
+.coloredDiv {
+  height:20px; width:20px; float:left;
+}
+
+#footer {
+  padding-top: 3em; color: #bfbfbf; font-size: 13px;
+}
+
+#footer a:visited {
+  color: #bfbfbf;
+  text-decoration: underline;
+}
+</style>
+<script type="text/javascript">
+var handler=null;
+// see https://github.com/mbostock/d3/wiki/Ordinal-Scales#category20c
+var colors = d3.scale.category20c().domain(d3.range(0,20)).range()
+
+function c0(index) { return "#9c9c9c"; }
+function c1(index) { return "#bdbdbd"; }
+function c2(index) { return colors[index % 16]; } // <-- note: uses only the first 16 colors
+
+var elapsed="5h 41m 5s"
+var beginningMillis=1575777552417;
+var endingMillis=1575798016955;
+var data=[
+{"label": "trim (BBduk on 47-G1314_S47)", "times": [{"starting_time": 1575777600826, "ending_time": 1575777600910, "color":c1(0)}, {"starting_time": 1575777600910, "ending_time": 1575777900910, "color":c2(0), "label": "5m 4s \/ 407.6 MB"}, {"starting_time": 1575777900910, "ending_time": 1575777904468, "color":c1(0)}]},
+{"label": "fastqc (FASTQC on 47-G1314_S47)", "times": [{"starting_time": 1575777600849, "ending_time": 1575777600913, "color":c1(1)}, {"starting_time": 1575777600913, "ending_time": 1575778142913, "color":c2(1), "label": "9m 5s \/ 287.6 MB"}, {"starting_time": 1575778142913, "ending_time": 1575778146208, "color":c1(1)}]},
+{"label": "trim (BBduk on 45-G1308_S45)", "times": [{"starting_time": 1575777602982, "ending_time": 1575777603048, "color":c1(0)}, {"starting_time": 1575777603048, "ending_time": 1575777920048, "color":c2(0), "label": "5m 21s \/ 410.1 MB"}, {"starting_time": 1575777920048, "ending_time": 1575777923635, "color":c1(0)}]},
+{"label": "fastqc (FASTQC on 45-G1308_S45)", "times": [{"starting_time": 1575777602997, "ending_time": 1575777603051, "color":c1(1)}, {"starting_time": 1575777603051, "ending_time": 1575778173051, "color":c2(1), "label": "9m 35s \/ 288.8 MB"}, {"starting_time": 1575778173051, "ending_time": 1575778177844, "color":c1(1)}]},
+{"label": "fastqc (FASTQC on 48-G1315_S48)", "times": [{"starting_time": 1575777603142, "ending_time": 1575777603256, "color":c1(1)}, {"starting_time": 1575777603256, "ending_time": 1575778182256, "color":c2(1), "label": "9m 44s \/ 316.9 MB"}, {"starting_time": 1575778182256, "ending_time": 1575778186833, "color":c1(1)}]},
+{"label": "trim (BBduk on 48-G1315_S48)", "times": [{"starting_time": 1575777603155, "ending_time": 1575777603260, "color":c1(0)}, {"starting_time": 1575777603260, "ending_time": 1575777919260, "color":c2(0), "label": "5m 20s \/ 423.9 MB"}, {"starting_time": 1575777919260, "ending_time": 1575777923215, "color":c1(0)}]},
+{"label": "fastqc (FASTQC on 49-G1316_S49)", "times": [{"starting_time": 1575777603595, "ending_time": 1575777603673, "color":c1(1)}, {"starting_time": 1575777603673, "ending_time": 1575778180673, "color":c2(1), "label": "9m 41s \/ 283.6 MB"}, {"starting_time": 1575778180673, "ending_time": 1575778184152, "color":c1(1)}]},
+{"label": "trim (BBduk on 49-G1316_S49)", "times": [{"starting_time": 1575777603606, "ending_time": 1575777603676, "color":c1(0)}, {"starting_time": 1575777603676, "ending_time": 1575777922676, "color":c2(0), "label": "5m 23s \/ 396.3 MB"}, {"starting_time": 1575777922676, "ending_time": 1575777926767, "color":c1(0)}]},
+{"label": "trim (BBduk on 46-G1309_S46)", "times": [{"starting_time": 1575777904485, "ending_time": 1575777904578, "color":c1(0)}, {"starting_time": 1575777904578, "ending_time": 1575778218578, "color":c2(0), "label": "5m 18s \/ 411.1 MB"}, {"starting_time": 1575778218578, "ending_time": 1575778222170, "color":c1(0)}]},
+{"label": "fastqc (FASTQC on 46-G1309_S46)", "times": [{"starting_time": 1575777923223, "ending_time": 1575777923318, "color":c1(1)}, {"starting_time": 1575777923318, "ending_time": 1575778660318, "color":c2(1), "label": "19m 52s \/ 334.8 MB"}, {"starting_time": 1575778660318, "ending_time": 1575779115576, "color":c1(1)}]},
+{"label": "fastqc (FASTQC on 44-G1307F_S44)", "times": [{"starting_time": 1575777923232, "ending_time": 1575777923322, "color":c1(1)}, {"starting_time": 1575777923322, "ending_time": 1575778684322, "color":c2(1), "label": "19m 52s \/ 299.1 MB"}, {"starting_time": 1575778684322, "ending_time": 1575779115231, "color":c1(1)}]},
+{"label": "trim (BBduk on 44-G1307F_S44)", "times": [{"starting_time": 1575777923643, "ending_time": 1575777923735, "color":c1(0)}, {"starting_time": 1575777923735, "ending_time": 1575778240735, "color":c2(0), "label": "5m 21s \/ 414.6 MB"}, {"starting_time": 1575778240735, "ending_time": 1575778244669, "color":c1(0)}]},
+{"label": "trim (BBduk on 43-G1307M_S43)", "times": [{"starting_time": 1575777926774, "ending_time": 1575777926892, "color":c1(0)}, {"starting_time": 1575777926892, "ending_time": 1575778251892, "color":c2(0), "label": "5m 28s \/ 383.4 MB"}, {"starting_time": 1575778251892, "ending_time": 1575778255230, "color":c1(0)}]},
+{"label": "fastqc (FASTQC on 43-G1307M_S43)", "times": [{"starting_time": 1575778146217, "ending_time": 1575778146313, "color":c1(1)}, {"starting_time": 1575778146313, "ending_time": 1575778994313, "color":c2(1), "label": "16m 9s \/ 290.3 MB"}, {"starting_time": 1575778994313, "ending_time": 1575779115375, "color":c1(1)}]},
+{"label": "align_bwa (bwa on 47-G1314_S47)", "times": [{"starting_time": 1575778222178, "ending_time": 1575778222277, "color":c1(2)}, {"starting_time": 1575778222277, "ending_time": 1575781259277, "color":c2(2), "label": "50m 44s \/ 5.5 GB"}, {"starting_time": 1575781259277, "ending_time": 1575781266423, "color":c1(2)}]},
+{"label": "align_bwa (bwa on 48-G1315_S48)", "times": [{"starting_time": 1575778255238, "ending_time": 1575778255331, "color":c1(2)}, {"starting_time": 1575778255331, "ending_time": 1575781759331, "color":c2(2), "label": "58m 28s \/ 5.5 GB"}, {"starting_time": 1575781759331, "ending_time": 1575781762854, "color":c1(2)}]},
+{"label": "align_bwa (bwa on 45-G1308_S45)", "times": [{"starting_time": 1575779115591, "ending_time": 1575779115682, "color":c1(2)}, {"starting_time": 1575779115682, "ending_time": 1575782324682, "color":c2(2), "label": "53m 33s \/ 5.5 GB"}, {"starting_time": 1575782324682, "ending_time": 1575782328520, "color":c1(2)}]},
+{"label": "align_bwa (bwa on 49-G1316_S49)", "times": [{"starting_time": 1575781267501, "ending_time": 1575781268637, "color":c1(2)}, {"starting_time": 1575781268637, "ending_time": 1575784760637, "color":c2(2), "label": "58m 19s \/ 5.5 GB"}, {"starting_time": 1575784760637, "ending_time": 1575784766405, "color":c1(2)}]},
+{"label": "align_bwa (bwa on 46-G1309_S46)", "times": [{"starting_time": 1575781762884, "ending_time": 1575781762988, "color":c1(2)}, {"starting_time": 1575781762988, "ending_time": 1575784871988, "color":c2(2), "label": "51m 54s \/ 5.5 GB"}, {"starting_time": 1575784871988, "ending_time": 1575784876514, "color":c1(2)}]},
+{"label": "align_bwa (bwa on 44-G1307F_S44)", "times": [{"starting_time": 1575782328537, "ending_time": 1575782328625, "color":c1(2)}, {"starting_time": 1575782328625, "ending_time": 1575785986625, "color":c2(2), "label": "1h 1m 3s \/ 5.5 GB"}, {"starting_time": 1575785986625, "ending_time": 1575785991400, "color":c1(2)}]},
+{"label": "align_bwa (bwa on 43-G1307M_S43)", "times": [{"starting_time": 1575784766432, "ending_time": 1575784767968, "color":c1(2)}]},
+{"label": "picard_SortSam (picard SortSam on 47-G1314_S47)", "times": [{"starting_time": 1575784876732, "ending_time": 1575784876830, "color":c1(3)}]},
+{"label": "picard_SortSam (picard SortSam on 48-G1315_S48)", "times": [{"starting_time": 1575784876751, "ending_time": 1575784876840, "color":c1(3)}]},
+{"label": "picard_SortSam (picard SortSam on 45-G1308_S45)", "times": [{"starting_time": 1575784876783, "ending_time": 1575784876846, "color":c1(3)}]},
+{"label": "picard_SortSam (picard SortSam on 49-G1316_S49)", "times": [{"starting_time": 1575785069968, "ending_time": 1575785070102, "color":c1(3)}]},
+{"label": "picard_SortSam (picard SortSam on 46-G1309_S46)", "times": [{"starting_time": 1575785991454, "ending_time": 1575785991504, "color":c1(3)}]},
+{"label": "picard_SortSam (picard SortSam on 44-G1307F_S44)", "times": [{"starting_time": 1575786310879, "ending_time": 1575786310972, "color":c1(3)}]}
+]
+
+
+function getTickFormat() {
+  var MIN = 1000 * 60
+  var HOUR = MIN * 60
+  var DAY = HOUR * 24
+  var delta = (endingMillis - beginningMillis)
+
+  if( delta < 2 * MIN ) {
+    return {
+      format: d3.time.format("%S"),
+      tickTime: d3.time.seconds,
+      tickInterval: 5,
+      tickSize: 6
+    }
+  }
+
+  if( delta < 2 * HOUR ) {
+    return {
+      format: d3.time.format("%M"),
+      tickTime: d3.time.minutes,
+      tickInterval: 5,
+      tickSize: 6
+    }
+  }
+
+  if( delta < 2 * DAY ) {
+    return {
+      format: d3.time.format("%H:%M"),
+      tickTime: d3.time.hours,
+      tickInterval: 1,
+      tickSize: 6
+    }
+  }
+
+  if( delta <= 7 * DAY ) {
+    return {
+      format: d3.time.format("%b %e %H:%M"),
+      tickTime: d3.time.hours,
+      tickInterval: 6,
+      tickSize: 6
+    }
+  }
+
+  return {
+    format: d3.time.format("%b %e"),
+    tickTime: d3.time.days,
+    tickInterval: 1,
+    tickSize: 6
+  }
+}
+
+function getLabelMargin(scale) {
+    $('<span class="labelSpan" style="display: none"></span>').appendTo('body');
+
+    var labelMargin = 0
+    $.each(data, function (key, value) {
+      labelMargin = Math.max(labelMargin, $('.labelSpan').html(value.label).width());
+    });
+
+    $('.labelSpan').remove();
+
+    return (labelMargin * scale);
+}
+
+function render() {
+  handler=null;
+  $("#timeline").empty()
+  $('#label_elapsed').text(elapsed)
+  $('#label_launch').text( d3.time.format('%d %b %Y %H:%M')(new Date(beginningMillis)) )
+
+  var width = $(window).width();
+  var chart = d3.timeline()
+    .stack() // toggles graph stacking
+    .margin({left:getLabelMargin(0.85), right:100, top:0, bottom:0})
+    .tickFormat( getTickFormat() )
+    .rowSeperators('#f5f5f5')
+    .showTimeAxisTick()
+    ;
+  var svg = d3.select("#timeline").append("svg").attr("width", width).datum(data).call(chart);
+}
+
+function hrz() {
+if( handler != null ) clearTimeout(handler)
+  handler = setTimeout(render, 150);
+}
+
+$(document).ready(render)
+$(window).resize(hrz); // resize the applet on window resize
+</script>
+</head>
+
+<body>
+<div>
+  <h3>Processes execution timeline</h3>
+  <p>
+    Launch time: <span id='label_launch'> </span><br>
+    Elapsed time: <span id='label_elapsed'> </span><br>
+    Legend: job wall time / memory usage (RAM) <span id='label_legend'> </span>
+  </p>
+  <div id="timeline"></div>
+</div>
+
+<div id='footer'>
+  Created with Nextflow -- <a href='http://www.nextflow.io' target='_blank'>http://nextflow.io</a>
+</div>
+
+<script type="text/javascript">
+var prot = (("https:" == document.location.protocol) ? "https://" : "http://");
+document.write(unescape("%3Clink href='" + prot + "fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css' %3E%3C/link%3E"));
+</script>
+</body>
+</html>

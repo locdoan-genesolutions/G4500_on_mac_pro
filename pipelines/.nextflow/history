@@ -1,0 +1,276 @@
+2019-12-02 13:39:32	-	awesome_rosalind	-	06bdd91ee76a162796da19dab021623f	74d2089e-7644-42cb-84e3-6cafd270b005	nextflow working_021219.nf
+2019-12-02 13:39:54	-	sick_mercator	-	f0ba8c67b9509f03bb2b48c868f09e54	16480bf8-d7f3-47aa-a21a-6f469c3874b6	nextflow working_021219.nf
+2019-12-02 13:41:57	-	scruffy_franklin	-	f0ba8c67b9509f03bb2b48c868f09e54	8f1ad88e-5ec3-4e1c-93ba-b2b473a7a206	nextflow working_021219.nf
+2019-12-02 13:48:14	-	soggy_bohr	-	f0ba8c67b9509f03bb2b48c868f09e54	7b1d53a7-c743-4995-8c39-64da7f98725e	nextflow working_021219.nf
+2019-12-02 14:04:05	10.3s	friendly_swanson	OK	f0ba8c67b9509f03bb2b48c868f09e54	c069a74e-4bb6-4837-b971-6e416ecec29a	nextflow working_021219.nf -c working_021219.config
+2019-12-02 14:06:24	10.7s	insane_morse	OK	f0ba8c67b9509f03bb2b48c868f09e54	ce813b60-839e-4e87-8811-40189a80c6c7	nextflow working_021219.nf -c working_021219.config
+2019-12-02 14:07:23	9.2s	jovial_cantor	OK	f0ba8c67b9509f03bb2b48c868f09e54	7d026066-d6ac-42d6-a081-6412ab18c603	nextflow working_021219.nf -c working_021219.config
+2019-12-02 14:08:46	3.2s	spontaneous_magritte	ERR	f0ba8c67b9509f03bb2b48c868f09e54	49327a65-545d-47e6-af9e-942830795cb4	nextflow working_021219.nf -c working_021219.config
+2019-12-02 14:09:57	3.4s	elegant_archimedes	ERR	61f9223599b4a54735c60f74174f5532	8e180b5a-0330-49c6-be84-eff5283469da	nextflow working_021219.nf -c working_021219.config
+2019-12-02 14:12:47	2.9s	angry_ramanujan	ERR	61f9223599b4a54735c60f74174f5532	ecdede03-f5ae-4a15-acd3-8bef4ee3e54c	nextflow working_021219.nf -c working_021219.config
+2019-12-02 14:13:07	2.8s	ecstatic_cuvier	ERR	61f9223599b4a54735c60f74174f5532	85bd85f9-bb99-4af4-b37c-35f936e7b926	nextflow working_021219.nf -c working_021219.config
+2019-12-02 14:13:43	7m	sick_ride	ERR	df41781cfaa0f31cf4aa56e7d7259ba6	adf92095-1ef0-41d8-9867-5c96d47a9e42	nextflow working_021219.nf -c working_021219.config
+2019-12-02 14:20:55	33.9s	grave_hopper	ERR	9dd427b5fb1dfc5aebc5a326c4055c18	cb198418-1f4c-4b64-ba91-b61439c71fbf	nextflow working_021219.nf -c working_021219.config
+2019-12-02 14:21:35	1m 35s	trusting_bhaskara	ERR	92e400fc9df1cf43eff46c31d8521a86	97be7963-6199-4608-b0f5-09cdcbf073da	nextflow working_021219.nf -c working_021219.config
+2019-12-02 14:23:17	2m 20s	gigantic_woese	ERR	d30e332a6f23d1e6b301b20892f64f16	649014bc-e32c-42c3-9872-273d57dccf66	nextflow working_021219.nf -c working_021219.config
+2019-12-02 14:25:54	5m 26s	focused_dalembert	ERR	47338e72762fe48b2c97c92fb8873339	a23e463f-886b-44a4-9eb8-57c6b1ababf0	nextflow working_021219.nf -c working_021219.config
+2019-12-02 14:47:39	3m 32s	desperate_cajal	ERR	fe434e93c8af5af68a612d9a35521de2	ae21edfa-64cf-46a3-ab69-a4c4ff71dfef	nextflow working_021219.nf -c working_021219.config
+2019-12-02 14:54:16	12.4s	curious_bell	OK	e540e2f0926def36faf2a7efb720b419	cb5fd73c-c8f0-428b-af73-06953a47d841	nextflow working_021219.nf -c working_021219.config
+2019-12-02 14:55:48	6.9s	friendly_pasteur	ERR	7551e7ec8f54353bcae851b31a51b593	17317c1b-b096-4d34-ab51-5f665c51ce2c	nextflow working_021219.nf -c working_021219.config
+2019-12-02 14:56:03	1m 15s	mighty_bhabha	ERR	7551e7ec8f54353bcae851b31a51b593	7d41a4f8-9690-4b7f-b9e5-a8f8c40beed0	nextflow working_021219.nf -c working_021219.config
+2019-12-02 14:59:04	2.6s	wise_majorana	ERR	8b2c8a372fc2bbda55efdf0665f9f415	7d457f84-85d7-4550-af68-d4f48e9b4daa	nextflow working_021219.nf -c working_021219.config
+2019-12-02 15:02:06	5m 40s	high_newton	ERR	7551e7ec8f54353bcae851b31a51b593	789eee06-98ca-4caf-be1e-7cb8ae9a4722	nextflow working_021219.nf -c working_021219.config
+2019-12-02 15:08:00	2m 37s	goofy_lovelace	ERR	358ebb1eef4de32c4e60860866b84ddc	0f06e3f7-c734-4a67-b967-d730e5f8751f	nextflow working_021219.nf -c working_021219.config
+2019-12-02 15:11:45	1m 5s	wise_sax	ERR	358ebb1eef4de32c4e60860866b84ddc	af70c79a-19b2-4070-8d17-ba699b8ce239	nextflow working_021219.nf -c working_021219.config
+2019-12-02 15:13:03	1m 57s	chaotic_yalow	ERR	56141f95826ff593f1799feeb0512f38	1cf122fd-b525-4eb3-9a8b-fe4be0d8d26f	nextflow working_021219.nf -c working_021219.config
+2019-12-02 15:15:24	54.2s	hopeful_raman	ERR	7d812a587ded03e34702633bb0e1aafc	07281a9f-1a5a-4f79-8aca-c29badc39f35	nextflow working_021219.nf -c working_021219.config
+2019-12-02 15:19:35	-	elegant_ampere	-	d9eecf1a1c1a721b34c2c9d920619ed7	430a5214-a0b5-4d53-88b6-f1bea44a21f8	nextflow working_021219.nf
+2019-12-02 15:19:48	3m 8s	magical_swanson	ERR	d9eecf1a1c1a721b34c2c9d920619ed7	f7516d03-6c8f-4688-86cf-1c765b884f79	nextflow working_021219.nf -c working_021219.config
+2019-12-02 15:23:01	-	serene_mayer	-	4087dd5ddbaf556d17e542d9160d49d4	830f16c6-1fd9-45d7-a014-0f1294cef7e4	nextflow working_021219.nf -c working_021219.config
+2019-12-02 15:23:39	-	curious_leavitt	-	bce5ad58a4b2a6e3432f6b66a924bc39	ad6f55d7-38cf-478d-bb46-59fa7419e0b3	nextflow working_021219.nf -c working_021219.config
+2019-12-02 15:24:31	-	infallible_meninsky	-	d096082224821d017feb6d6963d456a0	e3e612ae-5cef-4876-9e90-a1292292e8fb	nextflow working_021219.nf -c working_021219.config
+2019-12-02 15:24:49	1m 42s	goofy_banach	ERR	18f80561990e20aba66ff59b18d31306	035cfd9c-0e5b-4366-a47d-e79fb525c1f5	nextflow working_021219.nf -c working_021219.config
+2019-12-02 15:26:45	1m 8s	jolly_sinoussi	ERR	6631b576c8dced429cc23c1361cbb4c4	86dd562d-b334-4353-b978-7a4ad7b16704	nextflow working_021219.nf -c working_021219.config
+2019-12-02 15:28:48	-	nice_dalembert	-	1488124605c38015ba14eb9d1180c50e	1d280a66-b00e-4f2a-a4b3-2be3478ffb69	nextflow testing.nf -c working_021219.config
+2019-12-02 15:29:20	31.3s	stoic_wilson	ERR	f7fe6ad0e05803de47cf3096ad3bf358	b68eb85b-aaf4-41d6-931d-f33bb877d243	nextflow testing.nf -c working_021219.config
+2019-12-02 15:30:17	2m 32s	cheesy_lamport	ERR	ae892928394173fdccff45cf746e87ff	46713422-434f-42a8-8736-bc0fa90d9f8d	nextflow testing.nf -c working_021219.config
+2019-12-02 15:34:39	5m 5s	goofy_mcnulty	ERR	ae892928394173fdccff45cf746e87ff	a69c5078-bc57-4090-b103-1976e7701c15	nextflow testing.nf -c working_021219.config
+2019-12-02 15:40:13	54.9s	festering_heyrovsky	ERR	d4040b4799e2bf8a832f48c92d339f94	f2600559-3e99-44ff-a3b6-4365e76bec28	nextflow working_021219.nf -c working_021219.config
+2019-12-02 15:41:29	29.4s	nauseous_stallman	ERR	01091fad3a68afd330dd0eb335b5ccb2	08270600-eb67-42ad-85b5-46ea8c3a40c9	nextflow working_021219.nf -c working_021219.config
+2019-12-02 15:42:27	23.5s	hopeful_shockley	OK	01091fad3a68afd330dd0eb335b5ccb2	9c923759-1961-4a42-ac76-ebaff281db8c	nextflow working_021219.nf -c working_021219.config
+2019-12-02 15:54:00	3.1s	sharp_dijkstra	ERR	e5738623932575e26b4c95a6be72e944	4c0a62f7-9fa1-4d36-a842-d281988ffdbe	nextflow working_021219.nf -c working_021219.config
+2019-12-02 15:55:45	25.4s	voluminous_mcclintock	OK	e5738623932575e26b4c95a6be72e944	3b045ce7-6e1b-4fc8-b815-ea2a552f8ecd	nextflow working_021219.nf -c working_021219.config
+2019-12-02 15:59:48	25.2s	special_agnesi	OK	e5738623932575e26b4c95a6be72e944	b09c1924-4d00-4248-88b1-25aba4cfa273	nextflow working_021219.nf -c working_021219.config
+2019-12-02 16:03:01	15.7s	irreverent_engelbart	OK	29212e79790d960c61b81d52c7049777	f5ac68d5-715f-4e85-8a63-676243e97646	nextflow working_021219.nf -c working_021219.config
+2019-12-02 16:04:05	14.3s	elegant_dalembert	OK	0dbbab5035c81c51691c74d49bd664d9	c8c82dbc-1165-47f2-982b-52781f4b1e8c	nextflow working_021219.nf -c working_021219.config
+2019-12-02 16:04:55	14.9s	exotic_austin	OK	a405b8975f8a5bb97cf9ed0d8ef4cf20	fa7b8723-d1af-4f1a-9862-823c56cf3409	nextflow working_021219.nf -c working_021219.config
+2019-12-02 16:22:39	-	amazing_laplace	-	368d61f1741edfd2f0fafef6097833ca	dbf323ef-46f3-4118-a4aa-7a10ff328a28	nextflow working_021219.nf -c working_021219.config
+2019-12-02 16:23:40	-	stupefied_lavoisier	-	ec4381b2b5e8e9467197f82d74c20698	a77d1cfd-8ba3-4e09-9b5f-d6d3580bbfc3	nextflow working_021219.nf -c working_021219.config
+2019-12-02 16:24:11	-	admiring_crick	-	ec4381b2b5e8e9467197f82d74c20698	a2899975-52ce-4569-95c1-77ef9284043e	nextflow working_021219.nf -c working_021219.config
+2019-12-02 16:24:42	-	loving_jones	-	24b24b4f68032e54a75f5fadd8436b0f	5be37fcc-cc4a-4250-bb47-2428eea455dd	nextflow working_021219.nf -c working_021219.config
+2019-12-02 16:25:12	-	shrivelled_marconi	-	ec4381b2b5e8e9467197f82d74c20698	0e911ce6-7197-4039-abd0-f62ab00b5f5b	nextflow working_021219.nf -c working_021219.config
+2019-12-02 16:26:29	-	irreverent_bohr	-	ec4381b2b5e8e9467197f82d74c20698	14274c43-8844-4c12-a9c2-48e1a2284675	nextflow working_021219.nf -c working_021219.config
+2019-12-02 16:27:05	-	curious_heyrovsky	-	85c775ca424f92a8d134dadf70832a98	4b0cbeb4-3e1d-4a0f-9a0f-7021740f83dd	nextflow working_021219.nf -c working_021219.config
+2019-12-02 16:27:44	-	focused_nightingale	-	765b6aac247ff1347d8d9b2d0a334a36	e015e1ba-32f2-4e6f-a3e8-88f4ddecd5f0	nextflow working_021219.nf -c working_021219.config
+2019-12-02 16:35:39	-	hungry_carlsson	-	5915387e35643c9e423495c7fc92b96d	2c02b27b-d4c1-4aa5-8998-8ba41c98c710	nextflow working_021219.nf -c working_021219.config
+2019-12-02 16:36:40	-	mad_lumiere	-	85c775ca424f92a8d134dadf70832a98	d13b6748-2578-47b9-bdd2-4e2ca3fe4763	nextflow working_021219.nf -c working_021219.config
+2019-12-02 16:37:12	5.9s	pedantic_dubinsky	ERR	321ae8744833f4a301525a4c5b04582f	9f77a22c-4f2b-44a0-8e65-a3a18d508552	nextflow working_021219.nf -c working_021219.config
+2019-12-02 16:37:54	17.3s	sad_gilbert	OK	4f4c1043870f5ba63a42d2e7f5740db8	abd89162-b53d-433d-985b-aa09f0f22eaf	nextflow working_021219.nf -c working_021219.config
+2019-12-02 16:39:12	6.2s	clever_gates	ERR	a93d432001b83ed03a912f2ec2e1e6d2	65c4e827-86c5-4c99-ae64-b3a35d3645dc	nextflow working_021219.nf -c working_021219.config
+2019-12-02 16:40:02	17.7s	cranky_lamarr	OK	bb870fca17c3e7e826e5a3195f1c5135	3b715627-aa51-414f-b9e3-276dedb44f1b	nextflow working_021219.nf -c working_021219.config
+2019-12-02 16:41:01	16.3s	ridiculous_fourier	OK	c7f273731396e759f3ef63715dbeb063	7e3e1647-2991-4788-9bb9-da72a8128625	nextflow working_021219.nf -c working_021219.config
+2019-12-02 17:03:51	-	backstabbing_ekeblad	-	61e1a3006ff5047977e8e253a42b7321	884141c5-e3f4-48f2-858e-c4284e1db2a2	nextflow working_021219.nf
+2019-12-02 17:04:06	16.7s	maniac_kirch	OK	61e1a3006ff5047977e8e253a42b7321	463549e5-46ca-4820-abd1-1267b3107ee5	nextflow working_021219.nf -c working_021219.config
+2019-12-02 17:54:53	18.1s	drunk_bartik	OK	61e1a3006ff5047977e8e253a42b7321	1981f26b-44cd-4446-9bff-06177f9a260b	nextflow working_021219.nf -c working_021219.config
+2019-12-02 17:55:48	-	elegant_ardinghelli	-	6ab198e0a4b1e71be5b6b8ae59bf8135	d8ae9c68-904e-47a2-80af-2b1f935811c2	nextflow working.nf -c working.config
+2019-12-02 17:56:04	-	loving_rosalind	-	4cf71def7e9e21a50282c201b007369a	5f63d0c9-8ddd-4f64-8dc4-bd91dfb834a3	nextflow working.nf -c working.config
+2019-12-02 17:56:41	-	loving_miescher	-	4cf71def7e9e21a50282c201b007369a	02f024cd-4cd6-4ce4-8c82-161a0973baf7	nextflow working.nf -c working.config
+2019-12-02 17:57:32	-	lonely_blackwell	-	bf0f7a1290ead98f301bf26b7f60c7cf	fb9bb8e0-578b-4052-b5e9-441b13968cba	nextflow working.nf -c working.config
+2019-12-02 17:57:53	-	admiring_panini	-	168dcbffa62df887983c782b44ea307f	a98b4168-636b-4de2-a483-a97f261ca4e1	nextflow working.nf -c working.config
+2019-12-02 17:58:42	-	jovial_joliot	-	168dcbffa62df887983c782b44ea307f	a5ecc342-653c-4930-8a8e-2c68a8a68e28	nextflow working.nf -c working.config
+2019-12-02 17:58:52	-	jovial_gautier	-	ed5df9d36c23464226e85f08702663a4	b0a8a5c9-da6c-4ce5-8d20-8e6d0192a8b4	nextflow working.nf -c working.config
+2019-12-02 17:59:33	-	stoic_meucci	-	218005d4de1b073b9fefd7d3f9b42aad	1f2a6389-c14a-4991-b91c-d3d1b7b5797d	nextflow working.nf -c working.config
+2019-12-02 18:01:43	-	small_gilbert	-	88079713b74af30d9edc490c37cafe6e	6c99f241-78cb-4473-89c1-028375994afb	nextflow working.nf -c working.config
+2019-12-02 18:02:10	-	clever_edison	-	1f32dce8a4aba716479462e44b352ee0	782d8b8d-60a6-4850-8e59-e6556dd00df6	nextflow working.nf -c working.config
+2019-12-02 18:04:53	-	insane_lavoisier	-	d70f96f546ff051fdbeb862702b60385	63a51422-3110-442d-8f12-b681c662bec0	nextflow working.nf -c working.config
+2019-12-02 18:06:43	5s	suspicious_pauling	ERR	bcd61fa9910cb961ae36a29cbefaa344	328ff3bb-6ab1-48c2-9432-1efad210c0f9	nextflow working.nf -c working.config
+2019-12-02 18:07:44	10.7s	shrivelled_allen	ERR	bcd61fa9910cb961ae36a29cbefaa344	ca138239-a0b3-42ce-9dd6-008d0f58021e	nextflow working.nf -c working.config
+2019-12-02 18:09:52	7.7s	reverent_goldstine	ERR	bcd61fa9910cb961ae36a29cbefaa344	12d33027-0969-402a-b414-73138d865e14	nextflow working.nf -c working.config
+2019-12-02 18:12:36	-	confident_avogadro	-	d70f96f546ff051fdbeb862702b60385	1677f509-5c50-41ed-bc9d-0d4d709ee56f	nextflow working.nf -c working.config
+2019-12-02 18:13:06	-	naughty_carson	-	8ba489ea20933620f72bfa19dbbb5102	f6de6d2d-89fd-4fa2-bdfa-3f8e0a771cbd	nextflow working.nf -c working.config
+2019-12-02 18:13:29	-	gloomy_hugle	-	7155b05a66e3a16cfbc5797e84cfc770	70b72a67-24a2-48bf-8987-7c3c8018a881	nextflow working.nf -c working.config
+2019-12-02 18:13:41	-	happy_feynman	-	6713fd23a2e64d0a224dc20d41bc1e31	17c6852f-f18c-437b-9aef-12ac2df070c8	nextflow working.nf -c working.config
+2019-12-02 18:14:07	-	evil_mayer	-	9c2fe3c11343ae9cf353dd247867a515	ad03ca2b-0e7d-480a-bfe3-9230a93c430d	nextflow working.nf -c working.config
+2019-12-02 18:14:54	-	elegant_mayer	-	56af9e6906cdd8ffdd70788d543341a0	97f1c55c-cb7e-4331-acbf-3b17e0c7c97b	nextflow working.nf -c working.config
+2019-12-02 18:15:15	5.8s	peaceful_wilson	ERR	617005660f2b10b9fbe06b36a9e236cd	c8777fd4-dc81-4b16-9563-1d33a2f840c1	nextflow working.nf -c working.config
+2019-12-02 18:18:08	10.6s	high_ekeblad	ERR	2b4a73a34517a9500fc8eb886e1cbd11	b5199912-b6c6-4263-85ad-be4a9d01d538	nextflow working.nf -c working.config
+2019-12-02 18:19:01	9.3s	fabulous_joliot	ERR	2b4a73a34517a9500fc8eb886e1cbd11	4f846679-b469-451a-9b4e-fd6b022354b4	nextflow working.nf -c working.config
+2019-12-02 18:19:27	7.3s	distracted_gautier	ERR	2b4a73a34517a9500fc8eb886e1cbd11	d8167028-5ce3-4a8a-934c-6ebb87c54eb2	nextflow working.nf -c working.config
+2019-12-02 18:21:35	-	fabulous_stone	-	562655ef09b5d9a19e25b682f31b67cd	d1dc1b20-51f1-44ff-a77b-b81a496a9368	nextflow working.nf -c working.config
+2019-12-02 18:21:56	11.6s	cranky_bohr	ERR	c9eb9406b6bcce178c74050106cdf458	81fc6d83-9f59-4090-93c6-704457cba4da	nextflow working.nf -c working.config
+2019-12-02 18:24:23	-	zen_cori	-	f32b8b2c4e06d9d74af212894a1fdeed	2a82be3e-318c-49e1-8268-3af7fc6a2862	nextflow working.nf -c working.config
+2019-12-02 18:24:38	-	dreamy_aryabhata	-	ee4f29aef0f53f66c575c1fea343b289	2b1b8566-dfb7-4189-9ae2-fa9a00e301fd	nextflow working.nf -c working.config
+2019-12-02 18:24:53	-	compassionate_davinci	-	913c0204f583c5aa106308f54bfa744f	b69d85a3-34de-418f-b0d6-f21fb89c84d4	nextflow working.nf -c working.config
+2019-12-02 18:33:20	11.9s	confident_shockley	ERR	61fb397a0856e01871d230085f3b21dd	1bf52112-cb8c-4b65-85b0-770548b73870	nextflow working.nf -c working.config
+2019-12-02 18:34:01	10.5s	ridiculous_solvay	ERR	61fb397a0856e01871d230085f3b21dd	179e82c3-7d16-4312-af08-b56ba8c9a155	nextflow working.nf -c working.config
+2019-12-02 18:35:01	-	festering_hypatia	-	cff170fa0c7217c8d2a66e1b6b9f50d2	1aa12bf5-eea4-43b0-8a57-c1febfd30f57	nextflow working.nf -c working.config
+2019-12-02 18:36:18	-	infallible_bhabha	-	6c41b6d2b584fbbf86fb77160dd24a4a	e002d6bb-d09f-43dc-8044-658ccae71b3d	nextflow working.nf -c working.config
+2019-12-02 18:37:20	5.6s	pedantic_wright	ERR	07fbbe6d54229fb474dee2226c1552a4	9c62e0ff-2764-47db-a9c5-352b48e80b0a	nextflow working.nf -c working.config
+2019-12-02 18:38:50	11.1s	cheeky_ampere	ERR	07fbbe6d54229fb474dee2226c1552a4	9ae560e1-518d-4332-a45b-370c18872510	nextflow working.nf -c working.config
+2019-12-02 18:41:36	-	fervent_woese	-	328d4e426325172f380a7d418ef47fc4	6acacc21-75e5-428e-a797-56025dd9586d	nextflow working.nf -c working.config
+2019-12-02 18:41:48	-	condescending_tuckerman	-	6c41b6d2b584fbbf86fb77160dd24a4a	5a94276b-e7f1-4fd9-97f6-38419777703e	nextflow working.nf -c working.config
+2019-12-02 18:42:58	7.9s	goofy_rubens	ERR	11255e889952efb2843e4239cda74e0a	cfb2a0d4-c9fd-4680-93e6-f510d118ab53	nextflow working.nf -c working.config
+2019-12-02 18:43:34	9.3s	stoic_gates	ERR	90b55749b9f5422dbffb4aa67fb74156	7b0de318-4b48-4c8f-ab76-29aae9352a8b	nextflow working.nf -c working.config
+2019-12-02 18:45:45	-	adoring_gutenberg	-	deffc03ca41a8f236378b30c6613a77a	1974beba-aee4-45c3-9623-e4d6b5a84b3d	nextflow working.nf -c working.config
+2019-12-02 18:46:02	-	grave_golick	-	deffc03ca41a8f236378b30c6613a77a	ce545492-912b-41bf-81f4-ae424a2ce924	nextflow working.nf -c working.config
+2019-12-02 18:46:15	10.7s	marvelous_laplace	ERR	11255e889952efb2843e4239cda74e0a	3c551374-0346-49ec-be40-cc7d5e425136	nextflow working.nf -c working.config
+2019-12-02 18:48:28	9.9s	chaotic_poincare	ERR	5e6e8fabd27ad040d77f40bac663722f	cb33f9b7-0c28-46bf-8a74-4a4c77294b07	nextflow working.nf -c working.config
+2019-12-02 18:49:44	9.7s	backstabbing_cajal	ERR	4039e78062eab3525a6d22a31f3adb06	bbba3f4b-11d5-44b3-bd6c-f464e8ffc2ef	nextflow working.nf -c working.config
+2019-12-02 18:50:34	-	cheeky_knuth	-	a63d2c2ab33746e60d77db5c32de17a1	056ef464-ab12-442d-bf64-f1f34db9ff06	nextflow working.nf -c working.config
+2019-12-02 18:50:54	8.9s	distraught_nightingale	ERR	5e6e8fabd27ad040d77f40bac663722f	79d2b695-f432-42f0-9b81-3299daa279dd	nextflow working.nf -c working.config
+2019-12-02 18:52:42	10.1s	spontaneous_albattani	ERR	90b55749b9f5422dbffb4aa67fb74156	cfa58e07-94a4-4999-a895-a67b1dd0086a	nextflow working.nf -c working.config
+2019-12-02 18:53:15	16.9s	high_bernard	ERR	90b55749b9f5422dbffb4aa67fb74156	36e48b7d-23ec-4314-98c4-d33e2322108e	nextflow working.nf -c working.config
+2019-12-03 10:01:57	17.8s	stupefied_cajal	ERR	79c928bfea31dd7871905974a2674bec	a741c623-ea42-493f-bd24-9a9de0f585c5	nextflow working.nf -c working.config
+2019-12-03 10:07:05	-	insane_magritte	-	ffd8ea4d0ed75b6818cb5c208f7cf807	029baa46-9676-4ed8-b68c-419af733cf02	nextflow working.nf -c working.config
+2019-12-03 10:07:32	-	angry_borg	-	8995cc5c53023cece3a3ba18be80b87f	e0d8579a-6431-425f-80fc-5edba6ee8104	nextflow working.nf -c working.config
+2019-12-03 10:10:49	-	fervent_coulomb	-	6e7e9f55be4cde40d1c2e591604348ae	0c28ab34-e8c5-487b-9222-6363e6a020ae	nextflow working.nf -c working.config
+2019-12-03 10:11:13	3m 9s	prickly_mcnulty	ERR	a1f1fcb7e7dd2b3b13f69b704f4d2774	e5cf8075-1780-480e-b5bf-4a56dd5e3f3c	nextflow working.nf -c working.config
+2019-12-03 10:15:40	1m 17s	ecstatic_minsky	ERR	a1f1fcb7e7dd2b3b13f69b704f4d2774	6b83b3e6-0bc2-4498-9cb1-38f656ef6728	nextflow working.nf -c working.config
+2019-12-03 10:18:32	2m 16s	lonely_wilson	OK	a1f1fcb7e7dd2b3b13f69b704f4d2774	9313dd06-f4e9-4ebd-9b34-ef20d1348318	nextflow working.nf -c working.config
+2019-12-03 10:23:20	1m 48s	deadly_cuvier	OK	638fb1ba837b8874ac977554abe39591	e9953438-efb4-4db8-8cff-f7759b7d1c2d	nextflow working.nf -c working.config
+2019-12-03 10:26:34	1m 40s	friendly_poincare	OK	638fb1ba837b8874ac977554abe39591	ec021bc2-b26f-4e7d-ba82-88d55045970e	nextflow working.nf -c working.config
+2019-12-03 10:31:16	1m 46s	insane_crick	OK	931bab670df41a44c9c28b2f2365205e	edd6a77c-0c25-4189-91c2-3cab4aeaaa81	nextflow working.nf -c working.config
+2019-12-03 10:33:53	1m 2s	nasty_volhard	OK	dedb5b7ff097e442917f827bd80ecf58	0165688e-a13e-47fa-8bc8-27d658140886	nextflow working.nf -c working.config
+2019-12-03 10:37:44	2m 14s	berserk_fourier	OK	0471ec1ecfab214cb5d1f298ba266c94	788578f7-422a-460b-91a7-5036dbf2bc72	nextflow working.nf -c working.config
+2019-12-03 10:41:32	16.7s	determined_brahmagupta	ERR	5d198b3a1eafa136d85e9408af72d6a2	cac42c9e-bf8c-4fdc-90be-df3a3c4ee32a	nextflow working.nf -c working.config
+2019-12-03 10:42:51	47.9s	deadly_brown	OK	c4f7a37fb2115cfa6774d99588d674eb	27ba561c-ccd5-432a-b4d4-352db5a7cc73	nextflow working.nf -c working.config
+2019-12-03 10:45:09	48.1s	cheeky_leakey	OK	9325f4e4ce897faeae01dcf778d2ef41	d9f1499c-fba4-46fb-9a39-84ed6712dc13	nextflow working.nf -c working.config
+2019-12-03 10:49:52	1m 7s	sharp_majorana	OK	917e8f8a919c2b339f669184a37c6a7d	b4493c8e-a342-4207-8b05-f92a3789ba5c	nextflow working.nf -c working.config
+2019-12-03 11:02:36	1.7s	insane_rosalind	ERR	e07d66c1c146a5c0234a2c4a41a7fe9c	c16b9831-426f-4ba9-b33c-71e86d96ac15	nextflow working_031219.nf -c working_031219.config
+2019-12-03 11:03:13	1.6s	lonely_stallman	ERR	0dab21012a51ebef7f47b47a5821634a	76453ebf-9078-444a-8d04-698fe2e578af	nextflow working_031219.nf -c working_031219.config
+2019-12-03 11:04:06	1.6s	distracted_hawking	ERR	aadfadae2136a5a6758ccae4b48fa760	5e2e03ff-05b9-4e3e-85c8-efac19b65409	nextflow working_031219.nf -c working_031219.config
+2019-12-03 11:07:42	1m 8s	nice_bernard	ERR	e250b8c44f3a6a22c97d60b3b51e2eb2	1133d6e7-9529-4cb2-ac18-bf38c75931aa	nextflow working.nf -c working.config
+2019-12-03 11:09:56	42.6s	agitated_dubinsky	ERR	00e65062b590d63ba5a793132c0a2464	e36643c7-561c-470b-bfcd-bfee48c7f82a	nextflow working.nf -c working.config
+2019-12-03 11:14:36	-	condescending_poisson	-	999ec44cadf3e56648669935ffe91067	703ab4f3-b6ff-4bf6-b775-b2bb33612b9f	nextflow working.nf -c working.config
+2019-12-03 11:14:58	-	agitated_tesla	-	c467a7682f60599221e4e59317a6d4be	91d7362b-cd5a-41f0-b3c3-f95d49e209cd	nextflow working.nf -c working.config
+2019-12-03 11:15:11	-	kickass_yonath	-	f546d72f331a1d2719d8d5ff440a81fa	cb18bd35-4b16-40f9-a576-a6885afeb223	nextflow working.nf -c working.config
+2019-12-03 11:15:21	-	berserk_bell	-	f452f2d1fa2f140c094e1f7936414860	58a9071f-1e3b-4c3f-8bf3-5c2c8b274e9e	nextflow working.nf -c working.config
+2019-12-03 11:18:04	2m 42s	focused_tesla	ERR	f45bf9dad9f2c6f957ee9978494db3ef	9e106c84-e0d8-4ca0-a90d-52bd7582306f	nextflow working.nf -c working.config
+2019-12-03 11:25:47	17.8s	mighty_fourier	ERR	d2949314da85e826c3c33610bd1c387d	d954f502-4479-44b3-ab49-6407a6e79b67	nextflow working.nf -c working.config
+2019-12-03 11:28:12	18.4s	drunk_ardinghelli	ERR	347a5164b2554d34d361e1b83cdb2dc7	a54d35bc-ddf7-439d-b619-ed8469b8f2b5	nextflow working.nf -c working.config
+2019-12-03 11:29:30	-	tender_rosalind	-	6ae8d82bc129859369447747339b719f	66e7531e-b9d8-4d80-9a2b-62d1731174ce	nextflow working.nf -c working.config
+2019-12-03 11:29:53	-	cheesy_ptolemy	-	6ae8d82bc129859369447747339b719f	1195643f-7efe-4bf1-a664-1b0bc5819812	nextflow working.nf -c working.config
+2019-12-03 11:34:02	16s	tiny_gutenberg	ERR	db68c81dfc8e8a5f8d4eec9626d2b9c6	638eb97f-43fa-4eca-bb5e-5ee12950e309	nextflow working.nf -c working.config
+2019-12-03 11:38:16	18.4s	sharp_euclid	ERR	e7a1e2152a538285c564609d1545440a	6e202760-00f3-4d2d-a546-714293579221	nextflow working.nf -c working.config
+2019-12-03 11:40:00	41.4s	suspicious_davinci	ERR	68ac4ad3db6ca18b3cd0fdea89d6aa02	26629fa4-20c6-412d-88b4-e6c2b7626c2e	nextflow working.nf -c working.config
+2019-12-03 11:41:15	41s	spontaneous_easley	ERR	20ee1ebca9954845ea096d974d3e1706	4122ce84-e21c-4c50-ad4a-831fb474cfee	nextflow working.nf -c working.config
+2019-12-03 11:44:17	-	deadly_nobel	-	2626ac15e4ed8df91d511044be46b03d	6ff18d73-35ec-435f-9ccd-f90aa6ede84e	nextflow working.nf -c working.config
+2019-12-03 11:44:54	-	ecstatic_pasteur	-	495fb95ab12fd43c98a3c12e10556458	8efb9d69-98b0-4e25-b9fb-0f5c20a84d8e	nextflow working.nf -c working.config
+2019-12-03 11:45:29	6m 10s	scruffy_lamport	OK	61c964d5e6785116d5b03b65e80cf872	5eb1194d-d090-4312-aa8a-d3c691d1f5ac	nextflow working.nf -c working.config
+2019-12-03 11:58:52	38s	admiring_marconi	ERR	6af7dc7e21314e10de4e9969149af946	7a4ca036-c62e-46fa-a2d8-5c102bfe582c	nextflow working.nf -c working.config
+2019-12-03 12:04:26	-	modest_waddington	-	b84a1c651ca23380bfcb310512839fb2	8309d543-3824-448d-a24b-debff6d1af54	nextflow working.nf -c working.config
+2019-12-03 12:04:49	7m 54s	evil_murdock	OK	49b17b7183c62c8cb31fe4d73ede9304	996c330a-7237-42e2-bd75-bcb05da68bd7	nextflow working.nf -c working.config
+2019-12-03 12:18:28	7m 7s	distracted_chandrasekhar	OK	194c5e3205d0efc797673baf69e32437	81d840b8-7920-4910-99f7-88696838d6fb	nextflow working.nf -c working.config
+2019-12-03 12:30:47	4m 7s	silly_jones	ERR	b1f2b5b94f55ed89f9cbaa463be5393f	3aeb437e-7f54-4160-8264-7ce1ba5bb62e	nextflow working.nf -c working.config
+2019-12-03 13:23:43	4m 42s	prickly_avogadro	ERR	b1f2b5b94f55ed89f9cbaa463be5393f	75187680-d74f-4e41-9ed6-c0b0d252466f	nextflow working.nf -c working.config
+2019-12-03 13:31:17	6m 36s	exotic_jennings	ERR	fb59400660f04995ee90fedf6ce8c8d3	624665be-8660-4737-aad7-83a1ff325bf5	nextflow working.nf -c working.config
+2019-12-03 13:41:55	5m 23s	romantic_elion	OK	fb59400660f04995ee90fedf6ce8c8d3	1f3e109c-9551-4759-84f8-79c08549d40b	nextflow working.nf -c working.config
+2019-12-03 13:57:00	31.9s	fabulous_turing	ERR	4ebe5d508aefb4b09422e87c7df9c7d8	0ff3652e-5a3f-4e25-88fb-d87017ece1bd	nextflow working.nf -c working.config
+2019-12-03 13:58:12	4m 35s	high_archimedes	ERR	4ebe5d508aefb4b09422e87c7df9c7d8	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config
+2019-12-03 14:03:59	2.5s	trusting_hawking	ERR	c03faba05f620db989f629984e1155f2	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:04:33	2.3s	thirsty_venter	ERR	c03faba05f620db989f629984e1155f2	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:04:55	2.7s	cranky_bassi	ERR	9756fa69ee5dafec876d51de6cd8c8b3	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:09:32	2.1s	voluminous_wozniak	ERR	1042297ac71dbdaa3eb799dad6854af9	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:10:12	1.7s	big_murdock	ERR	d6f7e8338f3b8fe989b7dd0c99616a16	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:10:26	2s	sleepy_einstein	ERR	0bf6edeca68a25665a00bd80745eb0a2	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:11:54	2.4s	deadly_wright	ERR	43fdedcfb599ba4167f99f2c323b93b4	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:14:08	2.6s	sick_bardeen	ERR	3f1b576ceabc125b468f98e80efeb0f9	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:15:34	2.1s	insane_meninsky	ERR	267c3b4df2cbf61e0768675f6a253581	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:16:15	2s	condescending_agnesi	ERR	5710c1450ff070959004a315650e28e1	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:16:25	1.8s	sick_noyce	ERR	fc956f6998175584e8e16c0450efaf14	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:19:19	2.1s	grave_montalcini	ERR	cecc86e8fff2b2398783d4f553ef3bf0	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:19:31	1.5s	gigantic_swartz	ERR	db058afcaf759f4d6ba73424ae0a7cfa	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:19:50	2.2s	determined_roentgen	ERR	cecc86e8fff2b2398783d4f553ef3bf0	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:23:24	2.8s	awesome_shaw	ERR	46c99ef3e2277fd1b95bd5f1dbcbffcc	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:27:45	2.5s	jolly_austin	ERR	36a0d29c82dea315f2c8cc7845857351	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:29:01	3s	desperate_archimedes	ERR	060103cfb8e443e057a3fc4ccc9b86aa	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:33:03	2.9s	tender_yalow	ERR	261aad507edfbdef2375e0491ef7fce2	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:33:15	-	gloomy_faggin	-	fc0b74db0c826e4711ec298cd09f4909	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:33:37	2.8s	soggy_majorana	ERR	0d46d540675f566b8ab2958243643460	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:35:36	3s	backstabbing_hoover	ERR	0ad4402aac1f91f0cd3939e497e97f6b	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:35:58	3s	friendly_ampere	ERR	0ad4402aac1f91f0cd3939e497e97f6b	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:38:14	-	spontaneous_miescher	-	5c531fd99d76c774301a1a2f4fa0cd15	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:38:41	-	lethal_hypatia	-	332801b2a702e4eeb890dc500cbaefbe	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:45:16	2.4s	romantic_archimedes	ERR	9d2e1998f273c0ac3599423b26b7cdac	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:45:40	1.9s	prickly_poisson	ERR	9d2e1998f273c0ac3599423b26b7cdac	007ab00a-7b36-433b-8e0a-d0c02528e3a1	nextflow working.nf -c working.config -resume
+2019-12-03 14:45:57	5m 34s	jovial_goldstine	ERR	9d2e1998f273c0ac3599423b26b7cdac	b7563d09-ee45-4785-8bcc-46939d8d621d	nextflow working.nf -c working.config
+2019-12-03 14:52:53	6m 17s	admiring_boyd	ERR	0b3985708ba8fec0eb9c0b125dc36977	6a3a2a6e-4afb-47a2-b6e1-8168cbf6b0a3	nextflow working.nf -c working.config
+2019-12-03 15:03:45	2.4s	nostalgic_agnesi	ERR	1eacea182f38ed03302f5668fb4ce932	6a3a2a6e-4afb-47a2-b6e1-8168cbf6b0a3	nextflow working.nf -c working.config -resume
+2019-12-03 15:08:34	20.1s	pensive_curie	ERR	cee97ddef51f15f02fbb6fb680ab8aba	36982bec-85b4-4968-8220-39d554a797c4	nextflow working.nf -c working.config
+2019-12-03 15:22:03	5m 26s	clever_church	ERR	5c90c3f67d8b34be2b4ba82e07890bbd	66579f92-ec02-41f6-92d4-5c518c21f779	nextflow working.nf -c working.config
+2019-12-03 15:29:31	1.9s	reverent_heyrovsky	ERR	5c90c3f67d8b34be2b4ba82e07890bbd	66579f92-ec02-41f6-92d4-5c518c21f779	nextflow working.nf -c working.config -resume
+2019-12-03 15:30:15	2.1s	clever_woese	ERR	e50d5d646a41746d83ebec92202b95da	66579f92-ec02-41f6-92d4-5c518c21f779	nextflow working.nf -c working.config -resume
+2019-12-03 15:32:27	1.9s	magical_kowalevski	ERR	e50d5d646a41746d83ebec92202b95da	66579f92-ec02-41f6-92d4-5c518c21f779	nextflow working.nf -c working.config -resume
+2019-12-03 15:32:42	2.8s	disturbed_coulomb	ERR	4daf9164e370a65ea242e63d72ef7ded	66579f92-ec02-41f6-92d4-5c518c21f779	nextflow working.nf -c working.config -resume
+2019-12-03 15:33:54	2.3s	irreverent_visvesvaraya	ERR	d959a202f5b48084dc63b2b1f1322b3d	66579f92-ec02-41f6-92d4-5c518c21f779	nextflow working.nf -c working.config -resume
+2019-12-03 15:34:43	4m 35s	hopeful_thompson	ERR	d959a202f5b48084dc63b2b1f1322b3d	ebf419b9-3a25-4166-89bf-4d269d08d940	nextflow working.nf -c working.config
+2019-12-03 15:43:29	2.4s	stupefied_nightingale	ERR	2cfc62cbd9b934ef3631b9cc2dcafb00	ebf419b9-3a25-4166-89bf-4d269d08d940	nextflow working.nf -c working.config -resume
+2019-12-03 15:44:22	2.6s	evil_dijkstra	ERR	d3fa22fdeda005004bf56ee9372f0e50	ebf419b9-3a25-4166-89bf-4d269d08d940	nextflow working.nf -c working.config -resume
+2019-12-03 15:44:36	2.1s	silly_mayer	ERR	1c5e134ce74323ca294c291cc169c79a	ebf419b9-3a25-4166-89bf-4d269d08d940	nextflow working.nf -c working.config -resume
+2019-12-03 15:46:12	4m 44s	cranky_ride	OK	786fab9b41a7e4874d059b18820c1886	ebf419b9-3a25-4166-89bf-4d269d08d940	nextflow working.nf -c working.config -resume
+2019-12-03 15:55:09	10m 6s	fervent_goldberg	OK	fe524be53c4df4819145e51c804b1a4c	7c5c3b04-bfce-4fbb-a85f-ccd20e0e5b2c	nextflow working.nf -c working.config
+2019-12-03 16:17:32	11m 25s	extravagant_torricelli	ERR	a7e4d31bec9f4be4c152822757f27824	83c8e8f4-7258-40bc-8215-682257684270	nextflow working.nf -c working.config
+2019-12-03 16:32:26	6.3s	distracted_turing	ERR	7d9eaed0aa555a3447428d41ca0fd57a	83c8e8f4-7258-40bc-8215-682257684270	nextflow working.nf -c working.config -resume
+2019-12-03 16:35:25	1m 17s	exotic_lamarr	OK	b21e137c02854045e2a8921fe27a9fc6	83c8e8f4-7258-40bc-8215-682257684270	nextflow working.nf -c working.config -resume
+2019-12-03 16:49:20	15m 52s	gloomy_lavoisier	ERR	9d881228fe17fb89a0c1a9fa196ec2be	c4d43637-2e3a-427c-bb90-6277268f3a41	nextflow working.nf -c working.config -with-report report_031219
+2019-12-03 17:06:07	9.7s	reverent_perlman	OK	9d881228fe17fb89a0c1a9fa196ec2be	c4d43637-2e3a-427c-bb90-6277268f3a41	nextflow working.nf -c working.config -resume
+2019-12-03 22:49:27	1m 49s	modest_mercator	ERR	94e4588758c686a3ff4a69038c327a80	684fcb30-3748-4954-a372-377f92574619	nextflow working.nf -c working.config
+2019-12-03 22:57:37	8m 1s	cranky_goldwasser	ERR	94e4588758c686a3ff4a69038c327a80	b2ca15fb-5a2d-4dc9-9a3e-6e412ddf04b9	nextflow working.nf -c working.config -with-report report.html
+2019-12-03 23:07:02	6m 4s	ecstatic_carlsson	ERR	94e4588758c686a3ff4a69038c327a80	b2ca15fb-5a2d-4dc9-9a3e-6e412ddf04b9	nextflow working.nf -c working.config -with-report report.html -resume
+2019-12-03 23:13:14	59m 14s	hopeful_ekeblad	ERR	94e4588758c686a3ff4a69038c327a80	ffe49b85-ac04-4daf-b882-e3f18bd12fa6	nextflow working.nf -c working.config -with-report report.html
+2019-12-04 00:19:16	33m 17s	condescending_plateau	ERR	94e4588758c686a3ff4a69038c327a80	ffe49b85-ac04-4daf-b882-e3f18bd12fa6	nextflow working.nf -c working.config -with-report report.html -resume
+2019-12-04 00:54:09	9.4s	nostalgic_lichterman	ERR	94e4588758c686a3ff4a69038c327a80	ffe49b85-ac04-4daf-b882-e3f18bd12fa6	nextflow working.nf -c working.config -with-report report.html -resume --OUTDIR //Users/genesolutions/Desktop/output_testing
+2019-12-04 00:54:29	18h 9m 22s	pensive_swirles	ERR	94e4588758c686a3ff4a69038c327a80	ffe49b85-ac04-4daf-b882-e3f18bd12fa6	nextflow working.nf -c working.config -with-report report.html -resume --OUTDIR /Users/genesolutions/Desktop/output_testing
+2019-12-04 19:04:01	2m 11s	elated_lovelace	ERR	94e4588758c686a3ff4a69038c327a80	ffe49b85-ac04-4daf-b882-e3f18bd12fa6	nextflow working.nf -c working.config -with-report report.html -resume --OUTDIR /Users/genesolutions/Desktop/output_testing
+2019-12-04 19:08:01	11m 24s	mad_sax	ERR	94e4588758c686a3ff4a69038c327a80	ffe49b85-ac04-4daf-b882-e3f18bd12fa6	nextflow working.nf -c working.config -with-report report.html -resume --OUTDIR /Volumes/loc/output_testing
+2019-12-04 19:29:49	2m	chaotic_visvesvaraya	ERR	94e4588758c686a3ff4a69038c327a80	41ca80bf-3ab4-4937-bdbe-437fac9645ad	nextflow working.nf -c working.config -with-report --params.OUTDIR /Volumes/loc/output_testing/
+2019-12-04 19:33:04	30m 47s	modest_newton	ERR	94e4588758c686a3ff4a69038c327a80	56d00490-ae24-445e-9220-5ca8c9e27086	nextflow working.nf -c working.config -with-report --params.OUTDIR /Volumes/loc/output_testing/
+2019-12-04 20:05:38	5m 8s	admiring_allen	ERR	94e4588758c686a3ff4a69038c327a80	0bc22d37-a8d4-4e1f-ad95-f0a7e720095c	nextflow working.nf -c working.config -with-report --params.OUTDIR /Volumes/loc/output_testing/
+2019-12-04 20:12:13	8.1s	small_elion	ERR	94e4588758c686a3ff4a69038c327a80	00f35fe9-b582-4f7a-8d9c-9b8679662c1c	nextflow working.nf -c working.config -with-report --params.OUTDIR /Volumes/loc/output_testing/
+2019-12-04 20:12:26	-	nasty_sax	-	94e4588758c686a3ff4a69038c327a80	934158d7-f3cb-4973-bf84-1993e58e572d	nextflow working.nf -c working.config -with-report --params.OUTDIR /Volumes/loc/output_testing
+2019-12-04 20:22:02	47.7s	stupefied_bhabha	ERR	94e4588758c686a3ff4a69038c327a80	fe1542f2-f42f-442c-8661-fae488370fe8	nextflow working.nf -c working.config -with-report --OUTDIR /Volumes/loc/output_testing
+2019-12-04 20:23:57	8m 35s	mad_meitner	ERR	94e4588758c686a3ff4a69038c327a80	cc69a36c-ee87-4612-82fe-ccd71612bbc7	nextflow working.nf -c working.config -with-report --OUTDIR /Volumes/loc/output_testing
+2019-12-04 20:35:44	5h 36m 49s	chaotic_bassi	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing
+2019-12-05 02:12:45	42m 1s	fabulous_colden	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 06:48:34	25m 10s	astonishing_blackwell	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 07:15:00	23m 40s	friendly_hoover	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 07:39:00	29m 47s	ridiculous_torvalds	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 08:21:54	27m 15s	distracted_gates	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 08:59:11	24m 8s	serene_caravaggio	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 09:27:18	18m 52s	romantic_bohr	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 09:47:29	9h 24m 37s	maniac_spence	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 19:12:17	29m 3s	tiny_cray	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 19:43:21	28m 40s	irreverent_dalembert	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 20:18:01	14m 29s	sick_sanger	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 20:33:44	14m 30s	special_plateau	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 20:50:52	46m 39s	wise_monod	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 21:38:06	9m 4s	reverent_meucci	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 21:47:49	16m 10s	adoring_mestorf	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 22:04:43	4m 17s	spontaneous_aryabhata	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 22:09:41	21m 15s	tender_swirles	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 22:31:47	6m	kickass_banach	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 22:37:56	6m 52s	disturbed_ramanujan	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 22:45:11	5m 40s	fervent_easley	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 22:51:01	9m	reverent_majorana	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 23:00:29	16m 31s	amazing_legentil	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 23:17:31	29m 59s	drunk_mayer	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-05 23:47:38	18m 7s	tiny_laplace	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-06 00:06:48	13m 49s	curious_mestorf	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-06 00:21:10	17m 6s	cranky_joliot	ERR	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-06 00:38:24	6h 3m 25s	determined_brown	OK	94e4588758c686a3ff4a69038c327a80	fbaa325d-e967-4583-ad54-8c75faa3a871	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing -resume
+2019-12-06 07:56:33	20m 51s	mighty_poisson	ERR	94e4588758c686a3ff4a69038c327a80	0f63a727-2a87-466c-b4b9-4722527e93d0	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png
+2019-12-06 08:32:11	8m 53s	furious_kirch	ERR	94e4588758c686a3ff4a69038c327a80	d0dcc72e-d39d-43f4-8281-90367beb81e1	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png
+2019-12-06 08:43:56	23m 5s	crazy_magritte	ERR	94e4588758c686a3ff4a69038c327a80	faac75e2-f688-4d71-8635-0599f9c0b283	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png
+2019-12-06 09:12:26	5m 43s	peaceful_lorenz	ERR	94e4588758c686a3ff4a69038c327a80	e028adc8-bd4b-4ea1-abed-51385411081b	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png
+2019-12-06 09:18:53	3h 56m 42s	mighty_allen	ERR	94e4588758c686a3ff4a69038c327a80	89164289-2f4a-4216-ae72-0aef9b426dee	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png
+2019-12-06 18:42:00	1m 58s	marvelous_monod	ERR	94e4588758c686a3ff4a69038c327a80	89164289-2f4a-4216-ae72-0aef9b426dee	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png -resume
+2019-12-06 18:44:42	1m 56s	compassionate_easley	ERR	94e4588758c686a3ff4a69038c327a80	89164289-2f4a-4216-ae72-0aef9b426dee	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png -resume
+2019-12-06 18:47:45	50.1s	furious_mayer	ERR	94e4588758c686a3ff4a69038c327a80	6ea8cd42-ba28-4a79-b3f8-e94e608d3047	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png
+2019-12-06 18:52:08	20m 59s	chaotic_meucci	ERR	94e4588758c686a3ff4a69038c327a80	2463c2c3-674d-4fa5-9410-8b6ad05e75be	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png
+2019-12-06 19:14:44	3m 3s	elegant_kare	ERR	94e4588758c686a3ff4a69038c327a80	4838246e-6fb3-4782-8925-c80d85ee37e8	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png
+2019-12-06 19:18:47	10m 29s	goofy_blackwell	ERR	94e4588758c686a3ff4a69038c327a80	c2cb4a2b-f132-4aae-8438-b05e094e1a14	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png
+2019-12-06 19:29:21	20s	wise_booth	ERR	94e4588758c686a3ff4a69038c327a80	1d6f0291-4c2a-4ac8-bb50-0229cd04e17f	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png
+2019-12-06 19:30:24	3h 33m 9s	golden_aryabhata	ERR	94e4588758c686a3ff4a69038c327a80	d24441a6-e687-471c-b385-e786aaeb3826	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png
+2019-12-07 19:59:12	5h 41m 5s	condescending_torvalds	ERR	94e4588758c686a3ff4a69038c327a80	50850d15-54f1-4e7c-b76c-383d950bef57	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png
+2019-12-08 01:41:16	46m 46s	mad_euler	ERR	94e4588758c686a3ff4a69038c327a80	81056d23-4f1f-48c1-ae0f-3cb7d6caca4a	nextflow working.nf -c working.config -with-report report123.html --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png
+2019-12-08 02:49:32	24m 40s	serene_hugle	ERR	94e4588758c686a3ff4a69038c327a80	f6fbb29c-2438-463a-ab33-eca06c159bc9	nextflow working.nf -c working.config -with-report report123.html --INDIR /Volumes/GSSD01/repo/testing_strelka/G4500_raw/new --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png
+2019-12-08 18:59:18	18m 32s	hopeful_kalam	ERR	7c69cebcdea8cafb402ded60a79ebf9e	1cdda1db-e60d-492f-b34c-51baf3607f52	nextflow working.nf -c working.config -with-report report123.html --INDIR /Volumes/GSSD01/repo/testing_strelka/G4500_raw --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png
+2019-12-08 19:18:31	-	shrivelled_leavitt	-	7c69cebcdea8cafb402ded60a79ebf9e	671502c7-f3af-41d2-ab05-b0565eecf1f5	nextflow working.nf -c working.config -with-report report123.html --INDIR /Volumes/GSSD01/repo/testing_strelka/G4500_raw --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png
+2019-12-08 19:21:13	-	hopeful_volta	-	7c69cebcdea8cafb402ded60a79ebf9e	dad41195-824e-4fca-a7b5-e26b5feba333	nextflow working.nf -c working.config -with-report report123.html --INDIR /Volumes/GSSD01/repo/testing_strelka/G4500_raw --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png
+2019-12-08 20:29:40	23m 5s	small_hamilton	ERR	7c69cebcdea8cafb402ded60a79ebf9e	970e732c-b0d7-4971-a18b-17436df6bf74	nextflow working.nf -c working.config -with-report report123.html --INDIR /Volumes/GSSD01/repo/testing_strelka/G4500_raw --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png
+2019-12-08 20:53:24	3m 28s	elated_mccarthy	ERR	7c69cebcdea8cafb402ded60a79ebf9e	970e732c-b0d7-4971-a18b-17436df6bf74	nextflow working.nf -c working.config -with-report report123.html --INDIR /Volumes/GSSD01/repo/testing_strelka/G4500_raw --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png -resume
+2019-12-08 20:57:21	3m	exotic_ride	ERR	7c69cebcdea8cafb402ded60a79ebf9e	970e732c-b0d7-4971-a18b-17436df6bf74	nextflow working.nf -c working.config -with-report report123.html --INDIR /Volumes/GSSD01/repo/testing_strelka/G4500_raw --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png -resume
+2019-12-08 21:00:28	-	jolly_shaw	-	7c69cebcdea8cafb402ded60a79ebf9e	970e732c-b0d7-4971-a18b-17436df6bf74	nextflow working.nf -c working.config -with-report report123.html --INDIR /Volumes/GSSD01/repo/testing_strelka/G4500_raw --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png -resume
+2019-12-09 01:53:21	2m 58s	intergalactic_minsky	ERR	7c69cebcdea8cafb402ded60a79ebf9e	75d0f9b4-b2bc-4d66-a986-813f95d3b7ef	nextflow working.nf -c working.config -with-report report091219.html --OUTDIR /Volumes/loc/output_testing -with-trace -with-timeline timeline091219.html -with-dag flowchart.png
+2019-12-09 01:57:34	-	reverent_carlsson	-	7c69cebcdea8cafb402ded60a79ebf9e	60d9e476-7a0f-4fdc-b7e5-e60a708ce3a4	nextflow working.nf -c working.config -with-report report091219.html --OUTDIR /Volumes/loc/output_testing -with-trace -with-timeline timeline091219.html -with-dag flowchart.png
+2019-12-09 02:13:29	9h 58m 27s	berserk_fermat	OK	7c69cebcdea8cafb402ded60a79ebf9e	a92b8682-5acc-49cc-ab3d-a5ff6ae7b1a6	nextflow working.nf -c working.config -with-report report091219.html --OUTDIR /Volumes/loc/output_testing -with-trace -with-timeline timeline091219.html -with-dag flowchart.png

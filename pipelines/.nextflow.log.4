@@ -1,0 +1,127 @@
+Dec-08 20:57:20.458 [main] DEBUG nextflow.cli.Launcher - $> nextflow working.nf -c working.config -with-report report123.html --INDIR /Volumes/GSSD01/repo/testing_strelka/G4500_raw --OUTDIR /Volumes/loc/output_testing2 -with-trace -with-timeline timeline.html -with-dag flowchart.png -resume
+Dec-08 20:57:20.687 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.10.0
+Dec-08 20:57:20.703 [main] INFO  nextflow.cli.CmdRun - Launching `working.nf` [exotic_ride] - revision: 7c69cebcde
+Dec-08 20:57:20.730 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/working.config
+Dec-08 20:57:20.730 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/working.config
+Dec-08 20:57:20.762 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Dec-08 20:57:21.461 [main] DEBUG nextflow.extension.OperatorEx - Dataflow extension methods: branch,buffer,chain,choice,collate,collect,collectFile,combine,concat,count,countBy,countFasta,countFastq,countLines,countText,cross,distinct,filter,first,flatMap,flatten,fork,groupBy,groupTuple,ifEmpty,into,join,last,map,max,mean,merge,min,mix,phase,print,println,randomSample,reduce,separate,set,splitCsv,splitFasta,splitFastq,splitText,spread,subscribe,sum,take,tap,toDouble,toFloat,toInteger,toList,toLong,toSortedList,transpose,unique,until,view
+Dec-08 20:57:21.466 [main] DEBUG nextflow.Session - Session uuid: 970e732c-b0d7-4971-a18b-17436df6bf74
+Dec-08 20:57:21.466 [main] DEBUG nextflow.Session - Run name: exotic_ride
+Dec-08 20:57:21.466 [main] DEBUG nextflow.Session - Executor pool size: 12
+Dec-08 20:57:21.817 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 19.10.0 build 5170
+  Created: 21-10-2019 15:07 UTC (08:07 PDT)
+  System: Mac OS X 10.14.2
+  Runtime: Groovy 2.5.8 on OpenJDK 64-Bit Server VM 1.8.0_121-b15
+  Encoding: UTF-8 (UTF-8)
+  Process: 44585@Genes-Mac-Pro-03.local [192.168.0.189]
+  CPUs: 12 - Mem: 64 GB (264.7 MB) - Swap: 2 GB (322 MB)
+Dec-08 20:57:21.857 [main] DEBUG nextflow.Session - Work-dir: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/work [Mac OS X]
+Dec-08 20:57:21.858 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/bin
+Dec-08 20:57:21.872 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Dec-08 20:57:21.874 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-08 20:57:22.132 [main] DEBUG nextflow.Session - Session start invoked
+Dec-08 20:57:22.136 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /Users/genesolutions/Desktop/G4500_workflow/G4500_workflow/pipelines/trace.txt
+Dec-08 20:57:22.428 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec-08 20:57:22.490 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /Volumes/GSSD01/repo/testing_strelka/G4500_raw/; pattern: *_R{1,2}_*.fastq.gz; options: [:]
+Dec-08 20:57:22.659 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:fastqc` matches process fastqc
+Dec-08 20:57:22.663 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 20:57:22.663 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 20:57:22.668 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Dec-08 20:57:22.673 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=12; memory=64 GB; capacity=12; pollInterval=100ms; dumpInterval=5m
+Dec-08 20:57:22.713 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > fastqc -- maxForks: 12
+Dec-08 20:57:22.734 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:trim` matches process trim
+Dec-08 20:57:22.735 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 20:57:22.735 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 20:57:22.736 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > trim -- maxForks: 12
+Dec-08 20:57:22.740 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:align_bwa` matches process align_bwa
+Dec-08 20:57:22.741 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 20:57:22.741 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 20:57:22.743 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > align_bwa -- maxForks: 12
+Dec-08 20:57:22.748 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:picard_SortSam` matches process picard_SortSam
+Dec-08 20:57:22.749 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 20:57:22.749 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 20:57:22.750 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > picard_SortSam -- maxForks: 12
+Dec-08 20:57:22.756 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:picard_MarkDuplicates` matches process picard_MarkDuplicates
+Dec-08 20:57:22.757 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 20:57:22.757 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 20:57:22.758 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > picard_MarkDuplicates -- maxForks: 12
+Dec-08 20:57:22.766 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:strelka` matches process strelka
+Dec-08 20:57:22.767 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 20:57:22.767 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 20:57:22.768 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > strelka -- maxForks: 12
+Dec-08 20:57:22.811 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:vep` matches process vep
+Dec-08 20:57:22.811 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 20:57:22.811 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 20:57:22.812 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > vep -- maxForks: 12
+Dec-08 20:57:22.817 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:vep_filter_using_R` matches process vep_filter_using_R
+Dec-08 20:57:22.817 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-08 20:57:22.817 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-08 20:57:22.818 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > vep_filter_using_R -- maxForks: 12
+Dec-08 20:57:22.821 [main] DEBUG nextflow.script.BaseScript - No entry workflow defined
+Dec-08 20:57:22.822 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Dec-08 20:57:22.822 [main] DEBUG nextflow.Session - Session await
+Dec-08 20:58:09.443 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [3b/01af9e] Cached process > fastqc (FASTQC on 47-G1314_S47)
+Dec-08 20:58:09.443 [Actor Thread 16] INFO  nextflow.processor.TaskProcessor - [07/6bbc60] Cached process > trim (BBduk on 47-G1314_S47)
+Dec-08 20:58:09.490 [Actor Thread 16] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=36; maxQueueSize=108; keepAlive=1m
+Dec-08 20:58:11.475 [Actor Thread 14] INFO  nextflow.processor.TaskProcessor - [a4/69e887] Cached process > trim (BBduk on 45-G1308_S45)
+Dec-08 20:58:11.475 [Actor Thread 5] INFO  nextflow.processor.TaskProcessor - [c2/e43db6] Cached process > fastqc (FASTQC on 45-G1308_S45)
+Dec-08 20:58:11.612 [Actor Thread 17] INFO  nextflow.processor.TaskProcessor - [e6/1cd57d] Cached process > trim (BBduk on 48-G1315_S48)
+Dec-08 20:58:11.613 [Actor Thread 8] INFO  nextflow.processor.TaskProcessor - [5a/94fd27] Cached process > fastqc (FASTQC on 48-G1315_S48)
+Dec-08 20:58:11.870 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [b3/5df787] Cached process > trim (BBduk on 49-G1316_S49)
+Dec-08 20:58:11.871 [Actor Thread 9] INFO  nextflow.processor.TaskProcessor - [f3/148d2d] Cached process > fastqc (FASTQC on 49-G1316_S49)
+Dec-08 20:58:12.565 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [b3/f9185f] Cached process > trim (BBduk on 46-G1309_S46)
+Dec-08 20:58:12.565 [Actor Thread 6] INFO  nextflow.processor.TaskProcessor - [d0/197bb8] Cached process > fastqc (FASTQC on 46-G1309_S46)
+Dec-08 20:58:13.701 [Actor Thread 13] INFO  nextflow.processor.TaskProcessor - [6a/6485e3] Cached process > trim (BBduk on 44-G1307F_S44)
+Dec-08 20:58:13.702 [Actor Thread 4] INFO  nextflow.processor.TaskProcessor - [15/ab3c72] Cached process > fastqc (FASTQC on 44-G1307F_S44)
+Dec-08 20:58:13.888 [Actor Thread 3] INFO  nextflow.processor.TaskProcessor - [86/2002c2] Cached process > fastqc (FASTQC on 43-G1307M_S43)
+Dec-08 20:58:13.888 [Actor Thread 12] INFO  nextflow.processor.TaskProcessor - [88/378a2b] Cached process > trim (BBduk on 43-G1307M_S43)
+Dec-08 20:58:20.426 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 20:58:20.430 [Task submitter] INFO  nextflow.Session - [e7/4d4b9a] Submitted process > align_bwa (bwa on 47-G1314_S47)
+Dec-08 20:58:23.600 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 20:58:23.600 [Task submitter] INFO  nextflow.Session - [06/8ac3fc] Submitted process > align_bwa (bwa on 48-G1315_S48)
+Dec-08 20:58:23.785 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-08 20:58:23.785 [Task submitter] INFO  nextflow.Session - [3a/6d2b8a] Submitted process > align_bwa (bwa on 45-G1308_S45)
+Dec-08 21:00:19.206 [SIGINT handler] DEBUG nextflow.Session - Session aborted -- Cause: SIGINT
+Dec-08 21:00:19.233 [SIGINT handler] DEBUG nextflow.Session - The following nodes are still active:
+[process] picard_SortSam
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] picard_MarkDuplicates
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] strelka
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: BWA_REPO_FOLDER
+  port 2: (value) bound ; channel: TARGET_REPO_FOLDER
+  port 3: (cntrl) -     ; channel: $
+
+[process] vep
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: WORKING_FOLDER
+  port 2: (cntrl) -     ; channel: $
+
+[process] vep_filter_using_R
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: R_SCRIPT
+  port 2: (cntrl) -     ; channel: $
+
+Dec-08 21:00:19.236 [main] DEBUG nextflow.Session - Session await > all process finished
+Dec-08 21:00:19.236 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Dec-08 21:00:19.248 [main] WARN  n.processor.TaskPollingMonitor - Killing pending tasks (3)
+Dec-08 21:00:19.328 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=0; failedCount=3; ignoredCount=0; cachedCount=14; succeedDuration=0ms; failedDuration=0ms; cachedDuration=2h 1m 41s]
+Dec-08 21:00:19.328 [main] DEBUG nextflow.trace.TraceFileObserver - Flow completing -- flushing trace file
+Dec-08 21:00:19.331 [main] DEBUG nextflow.trace.ReportObserver - Flow completing -- rendering html report
+Dec-08 21:00:19.499 [main] DEBUG nextflow.trace.ReportObserver - Execution report summary data:
+  [{"cpuUsage":{"mean":92.71,"min":82,"q1":82.85,"q2":84,"q3":84,"max":149.3,"minLabel":"trim (BBduk on 49-G1316_S49)","maxLabel":"trim (BBduk on 43-G1307M_S43)","q1Label":"trim (BBduk on 47-G1314_S47)","q2Label":"trim (BBduk on 45-G1308_S45)","q3Label":"trim (BBduk on 48-G1315_S48)"},"process":"trim","mem":{"mean":768616155.43,"min":737865728,"q1":765016064,"q2":772431872,"q3":777775104,"max":784433152,"minLabel":"trim (BBduk on 49-G1316_S49)","maxLabel":"trim (BBduk on 47-G1314_S47)","q1Label":"trim (BBduk on 45-G1308_S45)","q2Label":"trim (BBduk on 43-G1307M_S43)","q3Label":"trim (BBduk on 46-G1309_S46)"},"memUsage":null,"timeUsage":null,"vmem":{"mean":5767512064,"min":5709209600,"q1":5742014464,"q2":5772992512,"q3":5779683328,"max":5846986752,"minLabel":"trim (BBduk on 49-G1316_S49)","maxLabel":"trim (BBduk on 44-G1307F_S44)","q1Label":"trim (BBduk on 43-G1307M_S43)","q2Label":"trim (BBduk on 46-G1309_S46)","q3Label":"trim (BBduk on 47-G1314_S47)"},"reads":{"mean":1581272297.43,"min":1465685592,"q1":1544212395,"q2":1562579816,"q3":1629164628.5,"max":1693886627,"minLabel":"trim (BBduk on 47-G1314_S47)","maxLabel":"trim (BBduk on 43-G1307M_S43)","q1Label":"trim (BBduk on 45-G1308_S45)","q2Label":"trim (BBduk on 49-G1316_S49)","q3Label":"trim (BBduk on 46-G1309_S46)"},"cpu":{"mean":92.71,"min":82,"q1":82.85,"q2":84,"q3":84,"max":149.3,"minLabel":"trim (BBduk on 49-G1316_S49)","maxLabel":"trim (BBduk on 43-G1307M_S43)","q1Label":"trim (BBduk on 47-G1314_S47)","q2Label":"trim (BBduk on 45-G1308_S45)","q3Label":"trim (BBduk on 48-G1315_S48)"},"time":{"mean":434857.14,"min":232000,"q1":449500,"q2":465000,"q3":477000,"max":494000,"minLabel":"trim (BBduk on 43-G1307M_S43)","maxLabel":"trim (BBduk on 44-G1307F_S44)","q1Label":"trim (BBduk on 47-G1314_S47)","q2Label":"trim (BBduk on 48-G1315_S48)","q3Label":"trim (BBduk on 49-G1316_S49)"},"writes":{"mean":1659982037.29,"min":1538193257,"q1":1621136384.5,"q2":1640538300,"q3":1710460781.5,"max":1777948372,"minLabel":"trim (BBduk on 47-G1314_S47)","maxLabel":"trim (BBduk on 43-G1307M_S43)","q1Label":"trim (BBduk on 45-G1308_S45)","q2Label":"trim (BBduk on 49-G1316_S49)","q3Label":"trim (BBduk on 46-G1309_S46)"}},{"cpuUsage":{"mean":71.67,"min":68.6,"q1":69.15,"q2":69.4,"q3":69.75,"max":85.9,"minLabel":"fastqc (FASTQC on 47-G1314_S47)","maxLabel":"fastqc (FASTQC on 43-G1307M_S43)","q1Label":"fastqc (FASTQC on 48-G1315_S48)","q2Label":"fastqc (FASTQC on 46-G1309_S46)","q3Label":"fastqc (FASTQC on 49-G1316_S49)"},"process":"fastqc","mem":{"mean":372974738.29,"min":341536768,"q1":360204288,"q2":364875776,"q3":382580736,"max":418840576,"minLabel":"fastqc (FASTQC on 48-G1315_S48)","maxLabel":"fastqc (FASTQC on 43-G1307M_S43)","q1Label":"fastqc (FASTQC on 44-G1307F_S44)","q2Label":"fastqc (FASTQC on 46-G1309_S46)","q3Label":"fastqc (FASTQC on 47-G1314_S47)"},"memUsage":null,"timeUsage":null,"vmem":{"mean":3292872118.86,"min":3280539648,"q1":3280660480,"q2":3284217856,"q3":3290290176,"max":3343446016,"minLabel":"fastqc (FASTQC on 47-G1314_S47)","maxLabel":"fastqc (FASTQC on 46-G1309_S46)","q1Label":"fastqc (FASTQC on 48-G1315_S48)","q2Label":"fastqc (FASTQC on 44-G1307F_S44)","q3Label":"fastqc (FASTQC on 49-G1316_S49)"},"reads":{"mean":1592015954.57,"min":1476429375,"q1":1554956256.5,"q2":1573326338,"q3":1639906465,"max":1704630526,"minLabel":"fastqc (FASTQC on 47-G1314_S47)","maxLabel":"fastqc (FASTQC on 43-G1307M_S43)","q1Label":"fastqc (FASTQC on 45-G1308_S45)","q2Label":"fastqc (FASTQC on 49-G1316_S49)","q3Label":"fastqc (FASTQC on 46-G1309_S46)"},"cpu":{"mean":71.67,"min":68.6,"q1":69.15,"q2":69.4,"q3":69.75,"max":85.9,"minLabel":"fastqc (FASTQC on 47-G1314_S47)","maxLabel":"fastqc (FASTQC on 43-G1307M_S43)","q1Label":"fastqc (FASTQC on 48-G1315_S48)","q2Label":"fastqc (FASTQC on 46-G1309_S46)","q3Label":"fastqc (FASTQC on 49-G1316_S49)"},"time":{"mean":608142.86,"min":366000,"q1":634000,"q2":650000,"q3":653000,"max":667000,"minLabel":"fastqc (FASTQC on 43-G1307M_S43)","maxLabel":"fastqc (FASTQC on 44-G1307F_S44)","q1Label":"fastqc (FASTQC on 47-G1314_S47)","q2Label":"fastqc (FASTQC on 48-G1315_S48)","q3Label":"fastqc (FASTQC on 45-G1308_S45)"},"writes":{"mean":4212615.86,"min":4189363,"q1":4208232,"q2":4215423,"q3":4216697.5,"max":4233666,"minLabel":"fastqc (FASTQC on 48-G1315_S48)","maxLabel":"fastqc (FASTQC on 45-G1308_S45)","q1Label":"fastqc (FASTQC on 46-G1309_S46)","q2Label":"fastqc (FASTQC on 44-G1307F_S44)","q3Label":"fastqc (FASTQC on 47-G1314_S47)"}},{"cpuUsage":null,"process":"align_bwa","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":null,"writes":null}]
+Dec-08 21:00:20.595 [main] DEBUG nextflow.trace.TimelineObserver - Flow completing -- rendering html timeline
+Dec-08 21:00:20.645 [main] WARN  nextflow.dag.GraphvizRenderer - To render the execution DAG in the required format it is required to install Graphviz -- See http://www.graphviz.org for more info.
+Dec-08 21:00:20.858 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Dec-08 21:00:20.903 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
